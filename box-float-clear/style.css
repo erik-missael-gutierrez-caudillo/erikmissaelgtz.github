@@ -1,0 +1,222 @@
+/* Generales */
+
+:root {
+--text-color1:  #000000;
+--text-color2: #ffffff;
+--backg-color:  #007dbc;
+--backg-color2: #3cc21d;
+--backg-color4: #268e06;
+--backg-color3: rgb(178, 32, 178);
+--details:  #f54f22;
+--shadow:  #fab914;
+--contrast:  #f8efcd;
+}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    background-color: gray;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header*/
+.header {
+    display: flex;
+    width: 100%;
+    padding: 1%;
+    margin: 0 auto;
+    background-color: #fab914;
+}
+
+.header-div{
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-div h1 {
+    color: var(--text-color1);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.header-div p {
+    color: var(--text-color1);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/*Introducción*/
+.intro {
+    width: 100%;
+    padding: 1% .6%;
+    background-color: var(--backg-color);
+}
+
+.intro-div{
+    text-align: center;
+    padding: 1%;
+    background-color: var(--backg-color);
+}
+
+.intro-div h2 {
+    color: var(--text-color1);
+    font-size: 1.7rem;
+}
+
+.intro-div p {
+    color: var(--text-color1);
+    font-size: 1.5rem;
+}
+
+/* Cajas  */
+.container-boxes {
+    content: "";
+    display: block;
+    background-color: var(--backg-color2);
+    clear: both;
+}
+[class*="box"] {
+    padding: 0 10px;
+    float: left;
+}
+.box1-4 {
+    width: 25%;
+}
+
+/* Cajas  */
+.container-article {
+    content: "";
+    display: block;
+    clear: both;
+    background-color: var(--shadow);
+}
+[class*="article"] {
+    padding: 0 10px;
+    float: left;
+}
+
+.article1-5 {
+    width: 20%;
+}
+
+
+#colaboracion {background-color: slateblue;}
+#honestidad {background-color: red;}
+#sensibilidad {background-color: dodgerblue;}
+#gratitud {background-color: #268e06;}
+#respeto {background-color: #fab914;}
+#caridad {background-color: var(--backg-color3);}
+#prudencia {background-color: var(--details);}
+#servicio {background-color: var(--backg-color);}
+#compasion {background-color: deeppink;}
+
+#colaboracion:hover {background-color: rgb(39, 33, 81);}
+    #honestidad:hover {background-color: rgb(185, 5, 5);}
+    #sensibilidad:hover {background-color: rgb(16, 98, 181);}
+    #gratitud:hover {background-color: #1a5b06;}
+    #respeto:hover {background-color: #e1a306;}
+    #caridad:hover {background-color: purple;}
+    #prudencia:hover {background-color: rgb(190, 98, 12);}
+    #servicio:hover {background-color: rgb(8, 89, 116);}
+    #compasion:hover {background-color: rgb(196, 13, 111);}
+
+
+  p {
+    text-align: center;
+    color: var(--text-color2);
+  }
+
+  strong {
+    color: var(--text-color2);
+  }
+
+  a {
+    text-decoration: solid;
+    color: var(--text-color1);
+  }
+
+
+  @media (min-width:100px) and (max-width:200px) {
+    .header-div h1 {
+        font-size: 18px;
+    }  
+
+    .header-div p {
+        font-size: 12px;
+    } 
+    
+/* Intro */
+    .intro-div h2 {
+        font-size: 18px;
+    }
+
+    .intro-div p {
+        font-size: 12px;
+    }
+
+/* Cajas  */
+.container-article {
+    content: "";
+    display: block;
+    clear: both;
+    background-color: var(--shadow);
+}
+[class*="article"] {
+    padding: 0 10px;
+    float: left;
+}
+.articles1-5 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.articles1-5 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.articles1-5 h1 {
+    font-size: 18px;
+}
+
+.articles1-5 p, a, strong {
+    font-size: 12px;
+}
+
+
+/* Cajas  */
+.container-boxes {
+    content: "";
+    display: block;
+    background-color: var(--backg-color2);
+    clear: both;
+}
+[class*="box"] {
+    padding: 0 10px;
+    float: left;
+}
+.box1-4 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.box1-4 h1 {
+    font-size: 18px;
+}
+
+.box1-4 p, a, strong {
+    font-size: 12px;
+}
+}
+

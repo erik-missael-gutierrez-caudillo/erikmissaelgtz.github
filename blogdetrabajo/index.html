@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+        <!--the overlay-->
+<div id="myNav" class="overlay">
+    <!--botón-->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Contenido superpuesto -->
+    <div class="overlay-content">
+        <a class="link" href="#">Inicio</a>
+        <a class="link"  href="#">Acerca de</a>
+        <a class="link"  href="#">Blog</a>
+        <a class="link"  href="#">Contacto</a>
+    </div>
+</div>
+<!-- Header -->
+   <header class="myheader">
+    <div class="container__myheader">
+    <div class="myheader-nav">
+        <p class="menu" style="font-size: 1rem; color: #818181;"><span onclick="openNav()">Menú</span></p>
+        </div>
+        <div class="myheader-imgs bg-image img1"><img src="../blogdetrabajo/imagenes/desarrollo_front-end_imagen_de_fondo_del_encabezado_1.png" alt=""></div>
+        <div class="myheader-imgs bg-image img2"><img src="../blogdetrabajo/imagenes/desarrollo_front-end_imagen_de_fondo_del_encabezado_2.png"  alt=""></div>
+        <div class="myheader-title bg-text">Erik Missael Gutierrez Caudillo <br> Conoce mas sobre mí y sobre mi trabajo.</div>
+            </div>
+   </header>
+        <main>
+           
+        </main>
+   <script>
+    function openNav() {
+        document.getElementById("myNav")
+        myNav.style.width = "100%"
+        myNav.style.height = "10%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav")
+        myNav.style.width = "0%";
+        myNav.style.height = "0%";
+    }
+   </script>
+</body>
+</html>

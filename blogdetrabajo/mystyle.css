@@ -1,0 +1,154 @@
+/* INCOMPLETO TOTALMENTE*/
+
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Manrope:wght@500;700&display=swap');
+
+/* HTML y cuerpo */
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+.myheader {
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.container__myheader {
+    width: 100%;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+/* El color de fondo del overlay  */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    background-color: rgba(o,o,o,.7);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+/* Posición del contenido del overlay*/
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*Enlaces del overlay*/
+.overlay .link {
+    padding: 0 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* Hover y focus de los enlaces */
+.overlay .link:hover, .overlay .link:focus {
+   color: #f1f1f1;
+   border-bottom: 3px solid #818181;
+}
+
+/* Posición del botón para cerrar el nav */
+.overlay .closebtn {
+    position:absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    box-shadow: .1rem .1rem .4rem .1rem rgb(132, 134, 139) ;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+/* Elemento que incluye el nav */
+.menu {
+    padding-left: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-bottom: 5.5%;
+}
+
+/* Span con función openNav */
+.menu span {
+    padding: 6px 15px;
+    border-radius: 10px;
+}
+
+.menu span:hover, .menu span:focus {
+    box-shadow:.1rem .1rem .4rem .1rem rgb(132, 134, 139);
+}
+
+/* Imagen de fondo del encabezado */
+.bg-image {
+    /* Center and scale the image nicely */
+   background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Imágenes */
+.img1, .img2 {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    margin: -3% auto;
+    overflow: hidden;
+}  
+  
+  /* Position text in the middle of the page/image */
+  .bg-text {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: #ead38893; /* Black w/opacity/see-through */
+    color: rgb(0, 0, 0);
+    text-shadow: .1rem .1rem .8rem rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 25px;
+    border: 3px solid #f1f1f1;
+    box-shadow: .1rem .1rem .5rem .1rem silver;
+    position: fixed; /* Stay fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 600px;
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+/* Pantalla maxima de 450px de ancho */
+@media screen and (max-height:450px){
+    .overlay .link {font-size: 20px;}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right:35px;
+    }
+}

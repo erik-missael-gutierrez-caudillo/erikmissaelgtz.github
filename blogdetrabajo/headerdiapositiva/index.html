@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERIK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+   <header class="myheader">
+           <!--nav-->
+<div id="myNav" class="overlay">
+    <!--botón para cerrar el nav-->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Contenido superpuesto -->
+    <div class="overlay-content">
+        <a class="link" href="#">Inicio</a>
+        <a class="link"  href="#">Acerca de</a>
+        <a class="link"  href="#">Blog</a>
+        <a class="link"  href="#">Contacto</a>
+    </div>
+</div>
+    <div class="container__myheader">
+    <div class="myheader-nav">
+        <p class="menu" style="font-size: 1rem; color: #818181;"><span onclick="openNav()">Menú</span></p>
+        </div>
+    
+   </header> <br><br>
+    <main>
+   <script>
+      
+  
+      function openNav() {
+        document.getElementById("myNav")
+        myNav.style.width = "100%"
+        myNav.style.height = "10%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav")
+        myNav.style.width = "0%";
+        myNav.style.height = "0%";
+    }
+
+
+let indiceDiapositiva = 1;
+mostrarDiapositivas(indiceDiapositiva);
+
+// Controles siguiente/anterior
+function siguienteDiapositiva(n) {
+  mostrarDiapositivas(indiceDiapositiva += n);
+}
+
+// Controles de imagen en miniatura
+function diapositivaActual(n) {
+  mostrarDiapositivas(indiceDiapositiva = n);
+}
+
+function mostrarDiapositivas(n) {
+  let i;
+  let diapositivas = document.getElementsByClassName("miDiapositiva");
+  let puntos = document.getElementsByClassName("punto");
+  if (n > diapositivas.length) {indiceDiapositiva = 1}
+  if (n < 1) {indiceDiapositiva = diapositivas.length}
+  for (i = 0; i < diapositivas.length; i++) {
+    diapositivas[i].style.display = "none";
+  }
+  for (i = 0; i < puntos.length; i++) {
+    puntos[i].className = puntos[i].className.replace(" active", "");
+  }
+  diapositivas[indiceDiapositiva-1].style.display = "block";
+  puntos[indiceDiapositiva-1].className += " active";
+}
+  </script>
+</body>
+</html>

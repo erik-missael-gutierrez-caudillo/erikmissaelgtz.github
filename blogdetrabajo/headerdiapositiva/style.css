@@ -1,0 +1,129 @@
+/* Generales*/
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Manrope:wght@500;700&display=swap');
+
+/* HTML y cuerpo */
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+.myheader {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background-color: #000000;
+}
+
+.container__myheader {
+    width: 100%;
+    padding: .2%;
+    margin: 0 auto;
+    display: table;
+}
+
+/* El color de fondo del nav  */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    background-color: rgba(o,o,o,.7);
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+
+/* Posición del contenido del nav*/
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 3px groove rgb(1, 221, 255);
+}
+
+/*Enlaces del overlay*/
+.overlay .link {
+    padding: 0 8px;
+    text-decoration: none;
+    font-size: .9rem;
+    color: #fffffff7;
+    display: inline-block;
+    transition: 0.3s;
+    margin-bottom: 1.4%;
+}
+
+/* Hover y focus de los enlaces */
+.overlay .link:hover, .overlay .link:focus {
+    color: #02eefa;
+   border-bottom: 3px groove #02eefa;
+}
+
+/* Posición del botón para cerrar el nav */
+.overlay .closebtn {
+    position:absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    box-shadow: .1rem .1rem .4rem .1rem rgb(252, 251, 252) ;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.overlay .closebtn:hover {
+  color: rgb(10, 126, 142);
+  box-shadow: .1rem .1rem .4rem .1rem rgb(164, 224, 242) ; 
+}
+
+/* Elemento que incluye el nav */
+.menu {
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0;
+    border-bottom: 3px groove rgb(5, 253, 220);
+}
+
+/* Span con función openNav */
+.menu span {
+    color: #05f7e2;
+    padding: 6px 18px;
+    background-color: #000000;
+    border: 2px groove rgb(5, 253, 220);
+}
+
+.menu span:hover, .menu span:focus {
+    box-shadow:.1rem .1rem .4rem .1rem rgb(250, 251, 253);
+    border-bottom: #84e8ef 2px groove;
+}
+
+
+
+/* Pantalla maxima de 450px de ancho */
+@media screen and (max-height:450px){
+    .overlay .link {font-size: 20px;}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right:35px;
+    }
+}
