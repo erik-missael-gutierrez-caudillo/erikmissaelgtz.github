@@ -1,0 +1,953 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   /* Generales */
+   @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+   html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+   }
+
+   *,*:before, *:after {
+    box-sizing: inherit;
+   }
+
+   body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+   }
+
+   .container {
+    width: auto;
+    margin: 30px;
+   }
+
+   p, a, li {
+    font-weight: 700;
+font-family: 'Quicksand', sans-serif;
+font-size: 1rem;
+   }
+
+   h1, h2, h3, h4 {
+    font-family: 'Noto Serif', serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+   }
+
+   .hero {
+    background-image: url(../proyectobarber/imagenes/bg3.gif);
+    height: 100vh;
+    background-repeat: unset;
+    background-size: auto;
+    background-position: center center;
+    background-attachment: fixed;
+   }
+
+   header {
+    justify-content: space-between;
+    align-items: center;
+   }
+
+/* Menú desplegable */
+
+/* Botón desplegable */
+.dropbtn {
+  background-color: #000;
+  color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  border-bottom: groove 6px rgb(255, 0, 0);
+}
+
+/* Botón desplegable al pasar el mouse y enfocar */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #000000;
+  border-color: blue;
+}
+
+/* El contenedor <div> - necesario para posicionar el contenido desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Contenido desplegable (oculto de forma predeterminada) */
+.dropdown-content {
+  display: none;
+  position: fixed;
+  padding: 6px 50px;
+  background-color: #000000;
+  box-shadow: 0 0 2px silver, 0 0 3px gray, 0 0 20px black;
+  z-index: 1;
+}
+
+/* Enlaces dentro del menú desplegable */
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Cambiar el color de los enlaces desplegables al pasar el mouse */
+.dropdown-content a:hover {
+  border-bottom: 5px solid #0d00ff;
+  color: #0d00ff;
+}
+
+/* Mostrar el menú desplegable (use JS para agregar esta clase al contenedor .dropdown-content cuando el usuario haga clic en el botón desplegable) */
+.show {display:block;}
+
+  /* Header */
+
+   header > .logo {
+    margin: 0 auto 100px auto;
+    padding: 50px;
+   }
+
+   div.logo h1.title {
+    padding: 100px;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #000000b3;
+    text-transform: uppercase;
+    font-size: 3.3rem;
+    text-shadow: 0 0 2px rgb(46, 1, 225), 0 0 2px #999, 0 0 20px rgb(185, 185, 185);
+    border-top:8px solid rgb(60, 0, 255);
+    border-bottom: 3px red solid;
+   }
+
+   div.logo p.text-title {
+    padding: 30px;
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.67);
+    border-top: 4px solid rgb(60, 0, 255);
+    border-bottom: 7px red solid;
+   }
+
+   .container-grid {
+    width: 100%;
+    padding: 15px;
+   }
+
+   /* Dispositivos de ancho minimo de 792px*/
+
+    @media only screen and (min-width:792px){
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      [class*="columns"] {
+        padding: 0 10px;
+        float: left;
+      }
+      .columns1-1 {
+        width: 100%;
+      }
+      .columns2-4 {
+        width: 50%;
+      }
+      .colums3-4 {
+        width: 75%;
+      }
+      .columns1-3 {
+        width: 33.3%;
+      }
+      .columns2-3 {
+        width: 66.6%;
+      }
+      .columns1-5 {
+        width: 19%;
+      }
+      .columns2-5 {
+        width: 40%;
+      }
+      .columns3-5 {
+        width: 60%;
+      }
+      .columns4-5 {
+        width: 80%;
+      }
+      }
+
+      /* Sección intro */
+      .intro {
+        margin: 20px;
+      }
+
+
+      .intro h2 {
+        text-align: center;
+      }
+
+      .intro p {
+        text-align: left;
+      }
+
+      img.photo {
+        border-radius: 50%;
+        width: 40%;
+        object-fit: cover;
+        margin: 20px 0;
+        padding: 10px;
+      }
+
+      
+      .columns1-3 img {
+        border-radius: 50%;
+        width: 90%;
+      }
+
+      div.job {
+        margin: 50px 0 50px 0;
+      }
+
+      div.job h1{
+        text-align: center;
+      }
+
+      div.job p{
+        text-align: left;
+      }
+
+      .separator {
+        width: 93%;
+        height: 8px;
+        border-radius: 5px;
+        background-color: #000000;
+        color: white;
+        border-bottom: 2px rgb(255, 0, 0) solid;
+        border-top: 2px solid blue;
+        border-left: 2px solid red;
+        border-right: 2px solid blue;
+        margin: 90px;
+      }
+ 
+
+      .testimony {
+        margin: 10px auto;
+        padding: 0;
+      }
+
+      .testimony h2{
+        margin: 15px auto 45px auto;
+        text-align: center;
+        padding: 0 100px 0 100px;
+      }
+
+      .testimony p{
+        margin: 0 auto 30px auto;
+      }
+
+      /* Servicios */
+
+      .services {
+        margin: 35px 0 35px 0;
+      }
+
+      .services h2 {
+        text-align: center;
+      }
+
+      .services p {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .service img {
+        width: 30%;
+      }
+
+      /* Tarjetas de Precios */
+      .prices {
+        padding: 2px;
+        margin: 0;
+      }
+
+      .prices h3, h4, p {
+        text-align: center;
+      }
+
+      .card-price {
+        font-weight: 900;
+        padding: 0;
+        height: 320px;
+        margin: 20px 5px 20px 5px;
+        border: 2px rgb(0, 0, 0) solid;
+        border-radius: 8px;
+        box-shadow: 0 0 2px black, 0 2px 3px black, 0 0 10px rgb(74, 74, 74);
+      }
+
+      .card-price h3 {
+        padding: 5px;
+        text-align: center;
+        background-color: #ffffffb8;
+      
+      }
+
+      .card-price p {
+        color: #000;
+        padding: 10px;
+        background-color: #ffffffbd;
+      }
+
+      sup {
+        vertical-align: top;
+      }
+
+      #haircut {
+        background-image: url(../proyectobarber/imagenes/price.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #haircut-and-dye {
+        background-image: url(../proyectobarber/imagenes/price4.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #beardand-eyebrow-dye {
+        background-image: url(../proyectobarber/imagenes/price3.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #haircut-beard-and-eyebrow {
+        background-image: url(../proyectobarber/imagenes/price2.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #beard-and-eyebrow {
+        background-image: url(../proyectobarber/imagenes/price5.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .address h3, p {
+        text-align: center;
+      }
+
+      /* Formulario  */
+      .form-user {
+        width: 100%;
+        margin: 50px auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .container_form {
+        margin: 20px auto;
+        width: 300px;
+        text-align: center;
+      }
+
+      .input-space {
+        padding: 10px 20px;
+      }
+
+      .input-space input {
+        border: 2px solid black;
+      }
+
+      .input-space input:hover {
+        border: 3px solid blue;
+      }
+
+      input[type="submit"] {
+        background-color: #0d00ff;
+        color: white;
+        border: 2px black solid;
+        padding: 5px 20px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #1c12cd;
+        border: 2px rgb(74, 74, 74) solid;
+      }
+
+      /* Footer */
+      div.footer {
+        float: left;
+        width: auto;
+        background-color: #090909;
+        padding: 0 60px 20px 60px;
+        border-top: solid 7px rgb(255, 0, 0);
+      }
+
+      footer.footer {
+      padding: 50px 40px 0 40px;
+      margin-bottom: 20px;
+      }
+
+      .social-media {
+        padding: 5px;
+        text-align: center;
+      }
+
+      .text-media {
+        padding: 0 0 10px 0;
+        color: white;
+      }
+
+      .email {
+        padding: 0 55px 0 55px;
+        color: white;
+        text-align: center;
+      }
+
+      .copy {
+        padding: 0 40px 0 40px;
+        color: white;
+        text-align: center;
+      }
+
+      #email {
+        font-size: 16px;
+        padding: 8px;
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        border-top: rgb(12, 135, 20) 2px solid;
+        border-bottom: rgb(255, 196, 0) 2px solid;
+        border-right: rgb(255, 106, 0) 2px solid;
+        border-left: rgb(2, 46, 240) 2px solid;
+        border-radius: 6px;
+        text-shadow: 0 2px 1px orange, 0 2px 2px yellow, 2px 1px 10px orange;
+        background: linear-gradient(120deg, green 50%, blue 100%);
+      }
+
+      #email:hover {
+        padding: 11px;
+      }
+
+      #whatsapp {
+        background-color: rgb(4, 83, 4);
+        color: white;
+        font-size: 16px;
+        padding: 8px;
+        margin: 10px;
+        text-decoration: none;
+        border-radius: 6px;
+        border: 2px solid white;
+      }
+
+      #whatsapp:hover {
+        padding: 11px;
+      }
+
+      a.icono{
+        text-decoration: none;
+        font-size: 12px;
+        padding: 10px;
+        margin: 15px 10px 15px 10px;
+        border-radius: 6px;
+      }
+
+      a.icono:hover {
+        padding: 13px;
+      }
+
+      #facebook{
+        background-color: #1c12cd;
+        color: #fff;
+      }
+
+      #instagram {
+        background-color: rgb(253, 117, 67);
+        color: #fff;
+      }
+
+      #twitter {
+        background-color: #1b58f3;
+        color: #fff;
+      }
+
+      #tiktok {
+        color: #000;
+        background-color: #fff;
+      }
+
+      #youtube {
+        background-color: #fff;
+        color: #d70e0e;
+      }
+
+     /* Dispositivos de ancho maximo de 500px */
+      @media only screen and (max-width:500px) {
+        .separator {
+          width: 70%;
+          margin: 0px;
+          height: 2px;
+        }
+
+        .footer {
+          padding: 5px 0px;
+        }
+        
+      footer.footer {
+        padding: 20px 0 10px 0;
+        }
+  
+        .social-media {
+          padding: 5px;
+          text-align: center;
+        }
+        
+      .email {
+        padding: 0 10px 0 10px;
+        color: white;
+        text-align: center;
+      }
+
+      .copy {
+        padding: 0 40px 0 40px;
+        color: white;
+        text-align: center;
+      }
+      
+      a.icono{
+        text-decoration: none;
+        font-size: 11px;
+        padding: 5px;
+        margin: 15px 10px 15px 10px;
+        border-radius: 6px;
+      }
+
+      a.icono:hover {
+        padding: 8px;
+      }
+
+      #email {
+        font-size: 12px;
+        padding: 5px;
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        border-top: rgb(12, 135, 20) 2px solid;
+        border-bottom: rgb(255, 196, 0) 2px solid;
+        border-right: rgb(255, 106, 0) 2px solid;
+        border-left: rgb(2, 46, 240) 2px solid;
+        border-radius: 6px;
+        text-shadow: 0 2px 1px orange, 0 2px 2px yellow, 2px 1px 10px orange;
+        background: linear-gradient(120deg, green 50%, blue 100%);
+      }
+
+      #email:hover {
+        padding: 8px;
+      }
+
+      #whatsapp {
+        background-color: rgb(4, 83, 4);
+        color: white;
+        font-size: 12px;
+        padding: 5px;
+        margin: 10px;
+        text-decoration: none;
+        border-radius: 6px;
+        border: 2px solid white;
+      }
+
+      #whatsapp:hover {
+        padding: 8px;
+      }
+      }
+
+      /* Dispositivos de ancho maximo de 892px */
+      @media (min-width:501px) and (max-width:892px) {
+        
+      /* Tarjetas de Precios */
+      .prices {
+        padding: 2px;
+        margin: 0;
+      }
+
+      .prices h3, h4, p {
+        text-align: center;
+      }
+
+      .card-price {
+        font-weight: 900;
+        padding: 0;
+        height: 320px;
+        margin: 20px 1.5px 20px 1.5px;
+        border: 2px rgb(0, 0, 0) solid;
+        border-radius: 8px;
+        box-shadow: 0 0 2px black, 0 2px 3px black, 0 0 10px rgb(74, 74, 74);
+      }
+
+      .card-price h3 {
+        padding: 5px;
+        text-align: center;
+        background-color: #ffffffb8;
+      
+      }
+
+      .card-price p {
+        color: #000;
+        padding: 10px;
+        background-color: #ffffffbd;
+      }
+
+        .separator {
+          width: 65%;
+          padding: 1px;
+          margin-top: 1px;
+          margin-bottom: 20px;
+        }
+
+        .columns1-3 {
+          width: 100%;
+        }
+
+        div.footer {
+          padding: 0 55px;
+        }
+        
+      footer.footer {
+        padding: 0 100px 30px 100px;
+        }
+  
+        .social-media {
+          padding: 10px 50px;
+          text-align: center;
+        }
+        
+      .email {
+        padding: 0 40px 30px 40px;
+        color: white;
+        text-align: center;
+      }
+
+      .copy {
+        padding: 0 40px 0 40px;
+        color: white;
+        text-align: center;
+      }
+      
+      a.icono{
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px;
+        margin: 15px 10px 15px 10px;
+        border-radius: 6px;
+      }
+
+      a.icono:hover {
+        padding: 18px;
+      }
+
+      #email {
+        font-size: 14px;
+        padding: 15px;
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        border-top: rgb(12, 135, 20) 2px solid;
+        border-bottom: rgb(255, 196, 0) 2px solid;
+        border-right: rgb(255, 106, 0) 2px solid;
+        border-left: rgb(2, 46, 240) 2px solid;
+        border-radius: 6px;
+        text-shadow: 0 2px 1px orange, 0 2px 2px yellow, 2px 1px 10px orange;
+        background: linear-gradient(120deg, green 50%, blue 100%);
+      }
+
+      #email:hover {
+        padding: 18px;
+      }
+
+      #whatsapp {
+        background-color: rgb(4, 83, 4);
+        color: white;
+        font-size: 14px;
+        padding: 15px;
+        margin: 10px;
+        text-decoration: none;
+        border-radius: 6px;
+        border: 2px solid white;
+      }
+
+      #whatsapp:hover {
+        padding: 18px;
+      }
+      }
+
+   
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
