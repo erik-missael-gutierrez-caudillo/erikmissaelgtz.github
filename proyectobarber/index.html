@@ -35,17 +35,17 @@
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">Main</button>
       <div id="myDropdown" class="dropdown-content">
-        <a href="#">Init</a>
-        <a href="#">Services</a>
-        <a href="#">Prices</a>
-        <a href="#">Cites</a>
-        <a href="#">Contact</a>
+        <a class="active" href="index.html">Init</a>
+        <a href="servicesindex.html">Services</a>
+        <a href="pricesindex.html">Prices</a>
+        <a href="citesindex.html">Cites</a>
+        <a href="contactindex.html">Contact</a>
       </div>
     </div>
-      <div class="logo">
-        <h1 lang="en" class="title">Barber Shop <span>Men's</span> </h1>
-        <p lang="en" class="text-title">Your look perfect!</p>
-      </div>
+    <div class="logo">
+      <h1 lang="en" class="title"><span><img src="../imagenes/logo.svg" width="70" alt=""></span><br>Barber Shop Men's </h1>
+      <p lang="en" class="text-title">Your look perfect!</p>
+    </div>
   </div>
 </header>
 
@@ -53,200 +53,282 @@
 <div class="container">
   <main class="container-grid">
 
-   <!-- Sección de introducción-->
-    <div class="container-grid">
-      <section class=" columns1-1">
-        <div class="columns2-4">
-          <h1>I love my job!</h1>
-          <p>I am barber dedicated in my work, I consider that with my skills in art I generate creative ideas in haircuts for my clients according to their image, I search you  perfect look! 👌.</p>
         </div>
-          <img 
-          class="photo" src="../proyectobarber/imagenes/img.png" alt="Photo Barber" width="200">
+      </section>
+    </div>
+   <!-- Sección de introducción-->
+    <div class="container">
+      <section class="introduction container-grid">
+        <div class="columns1-1">
+          <div class="introduction-text columns2-4">
+            <h1 id="my-job">I love my job!</h1>
+            <p>I am barber dedicated in my work, I consider that with my skills in art I generate creative ideas in haircuts for my clients according to their image, I search you  perfect look! 👌.</p>
+          </div>
+          <div class="introduction-img columns2-4">
+            <img class="photo columns2-4" src="../imagenes/img.png" alt="Photo Barber" width="200">
+          </div>
+        </div>
       </section>
     </div>
 
-      <!-- Sección de introducción-->
-      <div class="container-grid">
-        <section class="intro columns1-1">
-          <h2>Do you needs and wants a new look!</h2>
-          <p style="text-align: center;">For me it is an enormous satisfaction to see my work finished in the image of the people</p>
-          <h2>I have four year of the experience in my work, is my pasión and my customers always is happys with my work.</h2>
+      <!-- Sección de introducción complemento-->
+      <div class="container">
+        <section class="introduction-2 container-grid">
+         <div class="columns1-1">
+          <div class="columns1-1">
+            <h1>Do you needs and wants a new look!</h1>
+            <p style="text-align: center;">For me it is an enormous satisfaction to see my work finished in the image of the people</p>
+            <h2>I have four year of the experience in my work, is my pasión and my customers always is happys with my work.</h2>
+          </div>
+         </div>
         </section>
       </div>
 
-      <div class="container-grid">
-        <div class="separator columns1-1" style="float: left;"></div><br>
-        <div class="separator columns1-1" style="float: right;"></div>
-      </div>
-
-
+             
       <!-- Sección testimonios -->
-      <div class="container-grid">
-        <section class="testimony columns1-1">
-          <h2 style="text-align: center; padding: 5px 10px;">Testimonys</h2>
-          <p>Thanks to my customers for your messages and comments about my job.</p> 
-           <div class="columns1-3">
-             <img src="../proyectobarber/imagenes/img1.png" alt="Customer">
-              <h4>Brandon Peterson</h4>
-              <p>You have much talent very well hairdresser, very good workings my friend.</p>
-              <p style="color: rgb(231, 175, 35); padding: 5px 0  5px 0;"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i></p>
-                       </div>
-
-             <div class="columns1-3">
-                <img src="../proyectobarber/imagenes/img2.png" alt="Customer">
-                <h4>William Brown</h4>
-                <p>I'm really happy with your job, i love my look and yes 100% recomended.</p>
-                <p style="color: rgb(231, 175, 35); padding: 5px 0  5px 0;"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i></p>
-                           </div>
-
-               <div class="columns1-3">
-                  <img src="../proyectobarber/imagenes/img3.png" alt="Customer">
-                  <h4>Patrick Smith</h4>
-                  <p>It is my favorite hairdresser I really like how my hair looks on me</p>
+      <div  class="container">
+        <section class="testimony container-grid">
+         
+          <div class="columns1-1">
+            <h1 style="text-align: center; padding: 5px 10px;">Testimonys</h1>
+            <p>Thanks to my customers for your messages and comments about my job.</p>
+          </div>
+           <div class="testimony-card columns1-1">
+              <div class="columns1-3">
+                <img class="testimony-img" src="../imagenes/img1.png" alt="Customer">
+              </div>
+                <div class="columns2-3">
+                  <h4>Brandon Peterson</h4>
+                  <p>I made an appointment at Manolo's barbershop very easily with Whatsapp. Manolo did a very good job and was very polite and a pleasant conversationalist, I would definitely recommend this barbershop to anyone. The barbershop is visually beautiful and the care he took with the skin in the shave, all very good 10/10.</p>
                   <p style="color: rgb(231, 175, 35); padding: 5px 0  5px 0;"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i></p>
-               </div>
-         </section>
-      </div>
+                  <div class="columns2-3 user-comments">
+                    <p #likes><small>Date of experience 23/08/2023</small>
+                     <small id="numeroDeLikes"><i id="share" class='bx bxs-share-alt'></i> Share </small> <small> <i id="like" onclick="conteo()" class='bx bxs-like'></i> Like</small></p>
+                    <label class="label" for="commentsUser"><i id="message" class='bx bxs-message' ></i> <sup>add a comment</sup></label>
+                   <textarea class="comments" name="commentsUser" id="comments"></textarea>
+                 </div>
+                </div>
+                </div>
 
+             <div class="testimony-card columns1-1">
+              <div class="columns1-3">
+                <img class="testimony-img" src="../imagenes/img2.png" alt="Customer">
+              </div>
+                  <div class="columns2-3">
+                    <h4>William Brown</h4>
+                    <p>I'm really happy with your job, i love my look and yes 100% recomended.</p>
+                    <p style="color: rgb(231, 175, 35); padding: 5px 0  5px 0;"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i></p>
+                    <div class="columns2-3 user-comments">
+                      <p #likes><small>Date of experience 23/08/2023</small>
+                       <small id="numeroDeLikes"><i id="share" class='bx bxs-share-alt'></i> Share </small> <small> <i id="like" onclick="conteo()" class='bx bxs-like'></i> Like</small></p>
+                      <label class="label" for="commentsUser"><i id="message" class='bx bxs-message' ></i> <sup>add a comment</sup></label>
+                     <textarea class="comments" name="commentsUser" id="comments"></textarea>
+                   </div>
+                  </div>
+                  </div>
+
+               <div class="testimony-card columns1-1">
+                  <div class="columns1-3">
+                    <img class="testimony-img" src="../imagenes/img3.png" alt="Customer">
+                  </div>
+                    <div class="columns2-3">
+                      <h4>Patrick Smith</h4>
+                      <p>It is my favorite hairdresser I really like how my hair looks on me</p>
+                      <p style="color: rgb(231, 175, 35); padding: 5px 0  5px 0;"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i></p>  
+                      <div class="columns2-3 user-comments">
+                        <p #likes><small>Date of experience 23/08/2023</small>
+                         <small id="numeroDeLikes"><i id="share" class='bx bxs-share-alt'></i> Share </small> <small> <i id="like" onclick="conteo()" class='bx bxs-like'></i> Like</small></p>
+                        <label class="label" for="commentsUser"><i id="message" class='bx bxs-message' ></i> <sup>add a comment</sup></label>
+                       <textarea class="comments" name="commentsUser" id="comments"></textarea>
+                     </div>
+                    </div>
+                    </div>
+        </section>
+      </div>
 
           <!--Servicios-->
-          <div class="container-grid">
-            <div class="separator columns1-1" style="float: right;"></div><br>
-            <div class="separator columns1-1" style="float: left;"></div>
-          </div>
-
-               <section class="services columns1-1">
-                 <h2> Services</h2>
-                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur magni tempore, cum accusantium nam modi hic vitae aliquam excepturi enim maxime tempora, aliquid deleniti illo, dignissimos quo ab quae fuga.</p>
-              
-                    <div class=" service columns1-3">
-                       <img src="../proyectobarber/imagenes/ico.png" alt="Services" width="50">
-                       <h3>Cuts</h3>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam vero quisquam, assumenda perferendis atque eligendi harum dicta magni explicabo magnam nesciunt, doloribus suscipit aspernatur quasi nulla sapiente minima, repellat aut!</p>
-                    </div>
-
-                      <div class="service columns1-3">
-                         <img src="../proyectobarber/imagenes/ico2.png" alt="Services" width="50">
-                         <h3>Hair dye</h3>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, nesciunt sit. Dolores distinctio dignissimos harum ad asperiores quis. Tenetur amet quaerat similique quasi soluta blanditiis temporibus quas, optio molestiae ducimus?</p>
-                      </div>
-
-                        <div class="service columns1-3">
-                          <img src="../proyectobarber/imagenes/ico3.png" alt="Services" width="50">
-                          <h3>Beard and eyebrow</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim atque odit error quam repellendus illo distinctio veniam nihil dolor dolores? Itaque nemo dicta autem vel nam explicabo ipsam placeat maiores?</p>
-                        </div>
-                </section>
-          </div>
-
-          <div class="container-grid">
-            <section class="prices columns1-1">
-              <h3>Daniel king barber</h3>
-              <h4>Prices</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam libero asperiores natus repellat temporibus, tempore repudiandae nobis veniam amet nemo voluptate a. Quasi nam aliquid sunt dicta esse quae? Quasi!</p>
-              <div id="haircut" class="card-price columns1-5">
-                <h3>Haircut</h3>
-                <h3>Men</h3>
-                <p>$35.<sub>99</sub></p>
-                <h3>Children</h3>
-                <p>$19.<sup>99</sup></p>
-              </div>
-              <div id="haircut-and-dye" class="card-price columns1-5">
-                <h3>Haircut and dye</h3><br>
-                <h3>Men</h3>
-                <p>$65.<sup>99</sup></p><br>
-              </div>
-              <div id="beardand-eyebrow-dye" class="card-price columns1-5">
-                
-                <h3>Haircut, beard and eyebrow dye</h3><br>
-                <h3>Men</h3>
-                <p>$79.<sup>99</sup></p><br>
-              </div>
-              <div id="haircut-beard-and-eyebrow" class="card-price columns1-5">
-                <h3>Haircut, beard and eyebrow</h3><br>
-                <h3>Men</h3>
-                <p>$45.<sup>99</sup></p><br>
-              </div>
-              <div id="beard-and-eyebrow" class="card-price columns1-5">
-                <h3>Beard and eyebrow</h3><br>
-                <h3>Men</h3>
-                <p>$14.<sup>99</sup></p><br>
-              </div>
-              <div class="address">
-                <h3>Address <i style="color: green; font-size: large;" class='bx bxs-map'></i></h3>
-                <p>2301 E Riverside Dr, Austin, TX 78741, United States</p>
-                <h4>Make your appointment and don't wait! Just send me a message and I'll book you an appointment</h4>
-      <p>Contact me send me an email or whatsapp <br><br> <a id="email" href="#"><i class='bx bxl-gmail'></i></a><a id="whatsapp" href="#"><i class='bx bxl-whatsapp'></i></a></p>
-              </div>
-            </section>
-          </div>
-
-          <div class="container-grid">
-            <div class="separator columns1-1" style="float: left;"></div><br>
-            <div class="separator columns1-1" style="float: right;"></div>
-          </div>
-            <div class="form-user">
-              <section class="container_form">
-                <h3>Subscribe and wait for my notification, I am preparing a totally free course for my interested followers</h3>
-                <form method="post" autocomplete="on">
-                  <div class="input-space">
-                    <input type="text" name="name" placeholder="Name" required>
-                  </div>
-                  <div class="input-space">
-                    <input type="text" name="lastname" placeholder="Lastname" required>
-                  </div>
-                  <div class="input-space">
-                  <input type="email" name="email" placeholder="Email" required>
+            <div class="container">
+              <section class="services container-grid">
+                <div class="columns1-1">
+                  <h2> Services</h2>
+                  <p>At this barber, the impossible simply does not exist and we are prepared to make what has been said possible.</p>
                 </div>
-                <div class="input-space">
-                  <input type="tel" name="tel" placeholder="Phone" required>
+                <div class="columns1-1">
+                  <div class=" service-one columns1-3">
+                    <img src="../imagenes/ico.png" alt="Services" width="50">
+                    <h3>Haircut</h3>
+                    <p>Choose the cut you want, even if you have an idea we will make it, and why not! If you allow me, I will make a cut myself that looks great with your physical appearance.</p>
+                 </div>
+
+                   <div class="service-two columns1-3">
+                    <img src="../imagenes/ico2.png" alt="Services" width="50">
+                      <h3>Hair dye application</h3>
+                      <p>Rays, full cut, duotone, mix of colors or just the fade of your haircut. Whatever the client asks for here at Daniel King Barber Shop there are no limits, your wishes are orders.</p>
+                   </div>
+
+                     <div class="service-three columns1-3">
+                       <img src="../imagenes/ico3.png" alt="Services" width="50">
+                       <h3>Beard and eyebrow</h3>
+                       <p>Shaving and facial contouring, whether you want a very fine or voluminous finish, your look will be impressive.</p>
+                     </div>
                 </div>
-                <div class="input-space">
-                  <input type="submit" value="Send" placeholder="Email" required>
-                </div>
-                </form>
-              </section>
+               </section>
             </div>
-      
-  </main>
-</div>
+
+            <!--Sección Precios -->
+          <div class="container">
+            <section class="prices container-grid">
+              <div class="columns1-1 prices-text">
+                <h1 class="cont-img">Daniel King Barber Shop<br> <img class="img-barber" src="../imagenes/logo.svg"  width="60" alt="Logo Barber"></h1>
+                <h1>Prices Services</h1>
+                <p>Below I show you our prices per service and remember you can make your appointment by message via email or WhatsApp. To request an appointment, I recommend you do so six hours in advance based on your estimated time to attend.</p>  
+              </div>
+                <div class="columns1-1">
+                  <div class="columns2-5">
+                    <div id="price1">
+                        <h3>Haircut</h3>
+                        <h3>Men</h3>
+                        <p>$35.<sub>00</sub> USD</p>
+                        <h3>Children</h3>
+                        <p>$25.<sup>00</sup> USD</p>
+                    </div>
+                     </div>
+                     <div class="columns3-5">
+                      <div id="price2">
+                         <h3>Haircut and dye</h3><br>
+                         <h3>Men</h3>
+                         <p>$50.<sup>00</sup> USD</p><br>
+                      </div>
+                    </div>
+                </div>
+
+
+                <div class="columns1-1">
+                  <div class="columns3-5">
+                    <div id="price6">
+                       <h3>haircut, beard and side figures</h3><br>
+                       <h3>Men</h3>
+                       <p>$70.<sup>00</sup> USD</p><br>
+                    </div>
+                  </div>
+                  <div class="columns2-5">
+                    <div id="price3">
+                      <h3>Haircut, beard and eyebrow dye</h3><br>
+                      <h3>Men</h3>
+                      <p>$85.<sup>00</sup> USD</p><br>
+                    </div>
+                  </div>                 
+                  </div>
+                
+                  <div class="columns1-1">   
+                    <div class="columns2-5">
+                      <div id="price4">
+                        <h3>Haircut, beard and eyebrow</h3><br>
+                        <h3>Men</h3>
+                        <p>$60.<sup>00</sup> USD</p><br>
+                      </div>
+                    </div>
+                    <div class="columns3-5">
+                      <div id="price5">
+                        <h3>Beard and eyebrow</h3><br>
+                        <h3>Men</h3>
+                        <p>$15.<sup>00</sup> USD</p><br>
+                      </div>
+                    </div>
+                  </div>
+           </section>
+        </div>          
+
+              <!-- Domicilio -->
+               <div class="container">
+                <section class="container-grid">
+                  <div class="columns1-1">
+                    <div class="address columns1-1"><br><br>
+                      <h2 style="text-align: center;" id="address">Our Barber Shop Address <i style="color: green; font-size: large; text-align: center;" class='bx bxs-map'></i></h2>
+                      <p>2301 E Riverside Dr, Austin, TX 78741, United States</p>
+                      <h3>Make your appointment and don't wait! Just send me a message and I'll book you an appointment</h3>
+            <p>Contact me send me an email or whatsapp <br><br> <a title="danielkingbarbershop@gmail.com" href="#"><i id="gmail" class='bx bxl-gmail'></i></a> <a title="329-33-29-09"   href="#"><i id="whatsapp" class='bx bxl-whatsapp'></i></a> </p>
+                  </div>              
+                 </p>
+     
+                  </div>
+                </section>
+               </div>
+
+            <!-- Formulario -->
+            <div id="section_form_contain" class="form clearfix">
+              <section id="text_form_inputs">
+                  <div class="text_form_div">
+                    <h3>Subscribe and wait for my notification, I am preparing a totally free course for my interested followers.</h3>
+                    <h3>I have a big surprise for you at the end of the course. Are you interested and want to learn and work as a barber? Don't think twice and subscribe now.</h3>
+                    <p>Send me your details:</p><br><br>
+              
+                      <div class="form_user_contain">
+                        <form method="post" autocomplete="on">
+                          <div class="input-space">
+                            <input title="Writing your Firstname" type="text" name="name" placeholder="Name" required/>
+                          </div>
+                          <div class="input-space">
+                            <input title="Writing your Lastname" type="text" name="lastname" placeholder="Lastname" required/>
+                          </div>
+                          <div class="input-space">
+                          <input title="Writing your Email" type="email" name="email" placeholder="Email" required/>
+                        </div>
+                        <div class="input-space">
+                          <input title="Writing your Phone Number" type="tel" name="tel" placeholder="Number Phone" required/>
+                        </div>
+                        <div class="submit">
+                          <input id="send" type="submit" value="Send" placeholder="Email Address" required/>
+                        </div>
+                        </form>    
+                      </div>  
+              </section>
+            </div>      
+    </main>
+ </div>
 
 
 <!-- Footer -->
-<div class="footer container-grid" style="margin-top: 50px;">
-  <footer class="footer columns1-1">
-    <div class="social-media columns1-3">
-        <p class="text-media">Follow me on my social networks:</p> 
-        <p>
-          <a id="facebook" class="icono" href="#"><i class='bx bxl-facebook'></i></a>
-          <a id="instagram" class="icono" href="#"><i class='bx bxl-instagram-alt'></i></a>
-          <a id="twitter" class="icono" href="#"><i class='bx bxl-twitter'></i></a>
-          <a id="tiktok" class="icono" href="#"><i class='bx bxl-tiktok' ></i></a>
-          <a id="youtube" class="icono" href="#"><i class='bx bxl-youtube' ></i>
-          </a>
-        </p>
-      </div>
+<div id="footer">
+  <section class="contain_footer">
+    <footer id="my-footer" class="footer">
+        <div class="contents">
+          <div class="social-media">
+            <h4 class="text-media">Follow me on my social networks:</h4> 
+            <p>
+              <a class="icono" href="#"><i id="facebook" class='bx bxl-facebook'></i></a>
 
-      <div class="copy columns1-3">
-        <h4>&copy; All Rights Reserved</h4>
-        <p>This website is designed by Erik Gutiérrez.</p>
-      </div>
+              <a class="icono" href="#"><i  id="instagram"  class='bx bxl-instagram-alt'></i></a>
+              <a class="icono" href="#"><i id="twitter"  class='bx bxl-twitter'></i></a>
+              <a class="icono" href="#"><i id="tiktok" class='bx bxl-tiktok' ></i></a>
+              <a class="icono" href="#"><i  id="youtube"  class='bx bxl-youtube' ></i>
+              </a>
+            </p>
+          </div>    
+    
+        <div class="email">
+          <h4>Contact</h4>
+          <p>Contact me send me an email or whatsapp <br><br>
+             <a href="#"><i id="gmail" class='bx bxl-gmail'></i></a>
+             <a href="#"><i id="whatsapp" class='bx bxl-whatsapp'></i></a></p>
+        </div>
 
-    <div class="email columns1-3">
-      <h4>Contact</h4>
-      <p>Contact me send me an email or whatsapp <br><br> <a id="email" href="#"><i class='bx bxl-gmail'></i></a><a id="whatsapp" href="#"><i class='bx bxl-whatsapp'></i></a></p>
-    </div>
-  </footer>
+        <div class="copy">
+          <h4>&copy; All Rights Reserved</h4>
+          <p>This website is designed by <a style="text-decoration: none; font-weight: bold; color: darkgoldenrod;" href="https://github.com/erik-missael-gutierrez-caudillo/erikmissaelgtz.github.io">Erik Gutiérrez</a></p>
+        </div>
+            
+        </div>
+    </footer>
+  </section>
 </div>
-
+<script src="scripts.js"></script>
 <script>
-  
   /* Cuando el usuario hace clic en el botón,
 alternar entre ocultar y mostrar el contenido desplegable */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-
 // Cuando el menú desplegable 
 onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -260,9 +342,7 @@ openDropdown.classList.remove('show');
     }
   }
 }
-
 </script>
-
   <!-- Add your site or application content here -->
  <script src="main.css"></script>
  <script src="normalize.css"></script>

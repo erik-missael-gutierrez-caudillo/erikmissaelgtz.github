@@ -94,6 +94,8 @@ textarea {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+    padding: 0; 
+    margin: 0;
    }
 
    *,*:before, *:after {
@@ -113,19 +115,20 @@ textarea {
    }
 
    p, a, li {
-    font-weight: 700;
+    font-weight: 800;
 font-family: 'Quicksand', sans-serif;
-font-size: 1rem;
+    color: #565555;
    }
 
    h1, h2, h3, h4 {
     font-family: 'Noto Serif', serif;
     font-weight: 900;
     font-size: 1.4rem;
+    color: #212121;
    }
 
    .hero {
-    background-image: url(../proyectobarber/imagenes/bg3.gif);
+    background-image: url(../imagenes/bg3.gif);
     height: 100vh;
     background-repeat: unset;
     background-size: auto;
@@ -133,23 +136,52 @@ font-size: 1rem;
     background-attachment: fixed;
    }
 
-   header {
-    justify-content: space-between;
-    align-items: center;
+   
+   .hero2 {
+    background-image: url(../imagenes/main7.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+   }
+   
+   .hero3 {
+    background-image: url(../imagenes/main8.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+   }
+
+   
+   .hero4 {
+    background-image: url(../imagenes/main.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
    }
 
 /* Menú desplegable */
+   .active {
+    border-bottom: 5px groove #0b10a9;
+   }
 
 /* Botón desplegable */
 .dropbtn {
-  background-color: #000;
+  background-color: #0000008a;
   color: rgb(255, 255, 255);
-  padding: 10px 30px;
+  padding: 20px 60px 10px 60px;
   font-size: 16px;
   border: none;
   cursor: pointer;
   position: fixed;
   top: 0;
+  left: 10px;
+  border-radius: 0 0 10px 10px;
   border-bottom: groove 6px rgb(255, 0, 0);
 }
 
@@ -164,7 +196,6 @@ font-size: 1rem;
   position: relative;
   display: inline-block;
 }
-
 /* Contenido desplegable (oculto de forma predeterminada) */
 .dropdown-content {
   display: none;
@@ -194,18 +225,31 @@ font-size: 1rem;
 
   /* Header */
 
+  header {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   }
+  
+  header span img {
+    border-radius: 50%;
+    width: 30%;
+    margin: 10px auto;
+   }
+
    header > .logo {
     margin: 0 auto 100px auto;
-    padding: 50px;
+    padding: 40px;
    }
 
    div.logo h1.title {
-    padding: 100px;
+    padding: 10px;
     margin: 0 auto;
     color: #fff;
     background-color: #000000b3;
     text-transform: uppercase;
-    font-size: 3.3rem;
+    font-size: 2.3rem;
     text-shadow: 0 0 2px rgb(46, 1, 225), 0 0 2px #999, 0 0 20px rgb(185, 185, 185);
     border-top:8px solid rgb(60, 0, 255);
     border-bottom: 3px red solid;
@@ -222,562 +266,763 @@ font-size: 1rem;
    }
 
    .container-grid {
-    width: 100%;
-    padding: 15px;
+    margin: 30px;
+    padding: 0;
    }
 
-   /* Dispositivos de ancho minimo de 792px*/
-
-    @media only screen and (min-width:792px){
-      .clearfix::after {
-        content: "";
-        clear: both;
-        display: block;
-      }
-      [class*="columns"] {
-        padding: 0 10px;
-        float: left;
-      }
-      .columns1-1 {
-        width: 100%;
-      }
-      .columns2-4 {
-        width: 50%;
-      }
-      .colums3-4 {
-        width: 75%;
-      }
-      .columns1-3 {
-        width: 33.3%;
-      }
-      .columns2-3 {
-        width: 66.6%;
-      }
-      .columns1-5 {
-        width: 19%;
-      }
-      .columns2-5 {
-        width: 40%;
-      }
-      .columns3-5 {
-        width: 60%;
-      }
-      .columns4-5 {
-        width: 80%;
-      }
-      }
-
-      /* Sección intro */
-      .intro {
-        margin: 20px;
-      }
-
-
-      .intro h2 {
-        text-align: center;
-      }
-
-      .intro p {
-        text-align: left;
-      }
-
-      img.photo {
-        border-radius: 50%;
-        width: 40%;
-        object-fit: cover;
-        margin: 20px 0;
-        padding: 10px;
-      }
-
-      
-      .columns1-3 img {
-        border-radius: 50%;
-        width: 90%;
-      }
-
-      div.job {
-        margin: 50px 0 50px 0;
-      }
-
-      div.job h1{
-        text-align: center;
-      }
-
-      div.job p{
-        text-align: left;
-      }
-
-      .separator {
-        width: 93%;
-        height: 8px;
-        border-radius: 5px;
-        background-color: #000000;
-        color: white;
-        border-bottom: 2px rgb(255, 0, 0) solid;
-        border-top: 2px solid blue;
-        border-left: 2px solid red;
-        border-right: 2px solid blue;
-        margin: 90px;
-      }
- 
-
-      .testimony {
-        margin: 10px auto;
-        padding: 0;
-      }
-
-      .testimony h2{
-        margin: 15px auto 45px auto;
-        text-align: center;
-        padding: 0 100px 0 100px;
-      }
-
-      .testimony p{
-        margin: 0 auto 30px auto;
-      }
-
-      /* Servicios */
-
-      .services {
-        margin: 35px 0 35px 0;
-      }
-
-      .services h2 {
-        text-align: center;
-      }
-
-      .services p {
-        text-align: center;
-        margin-bottom: 40px;
-      }
-
-      .service img {
-        width: 30%;
-      }
-
-      /* Tarjetas de Precios */
-      .prices {
-        padding: 2px;
-        margin: 0;
-      }
-
-      .prices h3, h4, p {
-        text-align: center;
-      }
-
-      .card-price {
-        font-weight: 900;
-        padding: 0;
-        height: 320px;
-        margin: 20px 5px 20px 5px;
-        border: 2px rgb(0, 0, 0) solid;
-        border-radius: 8px;
-        box-shadow: 0 0 2px black, 0 2px 3px black, 0 0 10px rgb(74, 74, 74);
-      }
-
-      .card-price h3 {
-        padding: 5px;
-        text-align: center;
-        background-color: #ffffffb8;
-      
-      }
-
-      .card-price p {
-        color: #000;
-        padding: 10px;
-        background-color: #ffffffbd;
-      }
-
-      sup {
-        vertical-align: top;
-      }
-
-      #haircut {
-        background-image: url(../proyectobarber/imagenes/price.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      #haircut-and-dye {
-        background-image: url(../proyectobarber/imagenes/price4.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      #beardand-eyebrow-dye {
-        background-image: url(../proyectobarber/imagenes/price3.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      #haircut-beard-and-eyebrow {
-        background-image: url(../proyectobarber/imagenes/price2.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      #beard-and-eyebrow {
-        background-image: url(../proyectobarber/imagenes/price5.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      .address h3, p {
-        text-align: center;
-      }
-
-      /* Formulario  */
-      .form-user {
-        width: 100%;
-        margin: 50px auto;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .container_form {
-        margin: 20px auto;
-        width: 300px;
-        text-align: center;
-      }
-
-      .input-space {
-        padding: 10px 20px;
-      }
-
-      .input-space input {
-        border: 2px solid black;
-      }
-
-      .input-space input:hover {
-        border: 3px solid blue;
-      }
-
-      input[type="submit"] {
-        background-color: #0d00ff;
-        color: white;
-        border: 2px black solid;
-        padding: 5px 20px;
-      }
-
-      input[type="submit"]:hover {
-        background-color: #1c12cd;
-        border: 2px rgb(74, 74, 74) solid;
-      }
-
-      /* Footer */
-      div.footer {
-        float: left;
-        width: auto;
-        background-color: #090909;
-        padding: 0 60px 20px 60px;
-        border-top: solid 7px rgb(255, 0, 0);
-      }
-
-      footer.footer {
-      padding: 50px 40px 0 40px;
-      margin-bottom: 20px;
-      }
-
-      .social-media {
-        padding: 5px;
-        text-align: center;
-      }
-
-      .text-media {
-        padding: 0 0 10px 0;
-        color: white;
-      }
-
-      .email {
-        padding: 0 55px 0 55px;
-        color: white;
-        text-align: center;
-      }
-
-      .copy {
-        padding: 0 40px 0 40px;
-        color: white;
-        text-align: center;
-      }
-
-      #email {
-        font-size: 16px;
-        padding: 8px;
-        margin: 10px;
-        text-decoration: none;
-        color: white;
-        border-top: rgb(12, 135, 20) 2px solid;
-        border-bottom: rgb(255, 196, 0) 2px solid;
-        border-right: rgb(255, 106, 0) 2px solid;
-        border-left: rgb(2, 46, 240) 2px solid;
-        border-radius: 6px;
-        text-shadow: 0 2px 1px orange, 0 2px 2px yellow, 2px 1px 10px orange;
-        background: linear-gradient(120deg, green 50%, blue 100%);
-      }
-
-      #email:hover {
-        padding: 11px;
-      }
-
-      #whatsapp {
-        background-color: rgb(4, 83, 4);
-        color: white;
-        font-size: 16px;
-        padding: 8px;
-        margin: 10px;
-        text-decoration: none;
-        border-radius: 6px;
-        border: 2px solid white;
-      }
-
-      #whatsapp:hover {
-        padding: 11px;
-      }
-
-      a.icono{
-        text-decoration: none;
-        font-size: 12px;
-        padding: 10px;
-        margin: 15px 10px 15px 10px;
-        border-radius: 6px;
-      }
-
-      a.icono:hover {
-        padding: 13px;
-      }
-
-      #facebook{
-        background-color: #1c12cd;
-        color: #fff;
-      }
-
-      #instagram {
-        background-color: rgb(253, 117, 67);
-        color: #fff;
-      }
-
-      #twitter {
-        background-color: #1b58f3;
-        color: #fff;
-      }
-
-      #tiktok {
-        color: #000;
-        background-color: #fff;
-      }
-
-      #youtube {
-        background-color: #fff;
-        color: #d70e0e;
-      }
-
-     /* Dispositivos de ancho maximo de 500px */
-      @media only screen and (max-width:500px) {
-        .separator {
-          width: 70%;
-          margin: 0px;
-          height: 2px;
-        }
-
-        .footer {
-          padding: 5px 0px;
-        }
-        
-      footer.footer {
-        padding: 20px 0 10px 0;
-        }
-  
-        .social-media {
-          padding: 5px;
-          text-align: center;
-        }
-        
-      .email {
-        padding: 0 10px 0 10px;
-        color: white;
-        text-align: center;
-      }
-
-      .copy {
-        padding: 0 40px 0 40px;
-        color: white;
-        text-align: center;
-      }
-      
-      a.icono{
-        text-decoration: none;
-        font-size: 11px;
-        padding: 5px;
-        margin: 15px 10px 15px 10px;
-        border-radius: 6px;
-      }
-
-      a.icono:hover {
-        padding: 8px;
-      }
-
-      #email {
-        font-size: 12px;
-        padding: 5px;
-        margin: 10px;
-        text-decoration: none;
-        color: white;
-        border-top: rgb(12, 135, 20) 2px solid;
-        border-bottom: rgb(255, 196, 0) 2px solid;
-        border-right: rgb(255, 106, 0) 2px solid;
-        border-left: rgb(2, 46, 240) 2px solid;
-        border-radius: 6px;
-        text-shadow: 0 2px 1px orange, 0 2px 2px yellow, 2px 1px 10px orange;
-        background: linear-gradient(120deg, green 50%, blue 100%);
-      }
-
-      #email:hover {
-        padding: 8px;
-      }
-
-      #whatsapp {
-        background-color: rgb(4, 83, 4);
-        color: white;
-        font-size: 12px;
-        padding: 5px;
-        margin: 10px;
-        text-decoration: none;
-        border-radius: 6px;
-        border: 2px solid white;
-      }
-
-      #whatsapp:hover {
-        padding: 8px;
-      }
-      }
-
-      /* Dispositivos de ancho maximo de 892px */
-      @media (min-width:501px) and (max-width:892px) {
-        
-      /* Tarjetas de Precios */
-      .prices {
-        padding: 2px;
-        margin: 0;
-      }
-
-      .prices h3, h4, p {
-        text-align: center;
-      }
-
-      .card-price {
-        font-weight: 900;
-        padding: 0;
-        height: 320px;
-        margin: 20px 1.5px 20px 1.5px;
-        border: 2px rgb(0, 0, 0) solid;
-        border-radius: 8px;
-        box-shadow: 0 0 2px black, 0 2px 3px black, 0 0 10px rgb(74, 74, 74);
-      }
-
-      .card-price h3 {
-        padding: 5px;
-        text-align: center;
-        background-color: #ffffffb8;
-      
-      }
-
-      .card-price p {
-        color: #000;
-        padding: 10px;
-        background-color: #ffffffbd;
-      }
-
-        .separator {
-          width: 65%;
-          padding: 1px;
-          margin-top: 1px;
-          margin-bottom: 20px;
-        }
-
-        .columns1-3 {
-          width: 100%;
-        }
-
-        div.footer {
-          padding: 0 55px;
-        }
-        
-      footer.footer {
-        padding: 0 100px 30px 100px;
-        }
-  
-        .social-media {
-          padding: 10px 50px;
-          text-align: center;
-        }
-        
-      .email {
-        padding: 0 40px 30px 40px;
-        color: white;
-        text-align: center;
-      }
-
-      .copy {
-        padding: 0 40px 0 40px;
-        color: white;
-        text-align: center;
-      }
-      
-      a.icono{
-        text-decoration: none;
-        font-size: 18px;
-        padding: 15px;
-        margin: 15px 10px 15px 10px;
-        border-radius: 6px;
-      }
-
-      a.icono:hover {
-        padding: 18px;
-      }
-
-      #email {
-        font-size: 14px;
-        padding: 15px;
-        margin: 10px;
-        text-decoration: none;
-        color: white;
-        border-top: rgb(12, 135, 20) 2px solid;
-        border-bottom: rgb(255, 196, 0) 2px solid;
-        border-right: rgb(255, 106, 0) 2px solid;
-        border-left: rgb(2, 46, 240) 2px solid;
-        border-radius: 6px;
-        text-shadow: 0 2px 1px orange, 0 2px 2px yellow, 2px 1px 10px orange;
-        background: linear-gradient(120deg, green 50%, blue 100%);
-      }
-
-      #email:hover {
-        padding: 18px;
-      }
-
-      #whatsapp {
-        background-color: rgb(4, 83, 4);
-        color: white;
-        font-size: 14px;
-        padding: 15px;
-        margin: 10px;
-        text-decoration: none;
-        border-radius: 6px;
-        border: 2px solid white;
-      }
-
-      #whatsapp:hover {
-        padding: 18px;
-      }
-      }
+   
+   @media only screen and (min-width:892px) {
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    [class*="columns"] {
+      padding: 0 15px;
+      float: left;
+    }
+    .columns1-2 {
+      width: 50%;
+    }
+    .columns1-4 {
+      width: 25%;
+    }
+    .columns2-4 {
+      width: 50%;
+    }
+    .colums3-4 {
+      width: 75%;
+    }
+    .columns1-3 {
+      width: 33.3%;
+    }
+    .columns2-3 {
+      width: 66.6%;
+    }
+    .columns1-5 {
+      width: 20%;
+    }
+    .columns2-5 {
+      width: 40%;
+    }
+    .columns3-5 {
+      width: 60%;
+    }
+    .columns4-5 {
+      width: 80%;
+    }
+    .columns1-1 {
+      width: 100%;
+    }
+    }
+
+    /* Sección de introducción */
+    .introduction {
+      text-align: center;
+      padding: 15px;
+      margin: 30px 0;
+    }
+
+    .introduction-text {
+      margin-top: 90px;
+    }
+
+    #my-job {
+      text-shadow: 0 1px 1px rgb(176, 176, 183), 0 2px 2px rgb(99, 99, 102), 0 1px 4px rgb(60, 60, 60);
+    }
+
+    .photo {
+      border-radius: 50%;
+      width: 100%;
+      padding: 0;
+      box-shadow: 3px -1px 18px 3px black;
+    }
+
+    /* Sección introducción complemento */
+    .introduction-2 {
+      text-align: center;
+      padding: 25px;
+      margin: 50px 0 30px 0;
+    }
+
+    .introduction-2 h1 {
+      text-align: center;
+      text-shadow: 0 1px 1px rgb(183, 183, 183), 0 2px 2px rgb(72, 72, 72), 0 1px 4px rgb(120, 119, 119);
+      padding: 25px;
+      margin: 50px 0 30px 0;
+    }
+
+    /* Sección de testimonios */
+    .testimony {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .testimony-img {
+      border-radius: 50%;
+      width: 80%;
+      margin: 25px 0;
+      box-shadow: 3px -1px 28px 3px black;
+    }
+
+    .testimony-img:hover {
+      scale: 1.04;
+      box-shadow: -7px -7px 38px -3px rgba(168, 144, 6, 0.432), 7px -7px 38px 3px rgba(218, 165, 32, 0.418), -7px 7px 40px 10px rgba(163, 127, 35, 0.493);
+    }
+
+    .testimony-card {
+      margin: 25px 0;
+    }
+
+    .bxs-star {
+      padding: 5px;
+      margin: 4px;
+      background-color: #000;
+      border-radius: 50%;
+      box-shadow: 0 1px 2px 1px gold, 0 1px 2px 1px rgb(120, 104, 14);
+    }
+
+    .bxs-star:hover {
+      scale: 1.2;
+    }
+    
+    .user-comments {
+      width: 100%;
+      display: inline-block;
+      align-items: center;
+      justify-content: center;
+      padding: 2px;
+      text-align: center;
+      line-height: 6px;
+      margin-bottom: 45px;
+    }    
+    
+    .user-comments #Likes {
+      font-size: small;
+      width: 100%;
+    }
+
+    .user-comments p small {
+      font-size: small;
+      width: 45%;
+    }
+
+    sup {
+      padding: 4px;
+      margin-bottom: 15px;
+    }
+
+    i#message:hover {
+      transform: rotate(-5deg);
+      scale: 1.8;
+      color: rgb(0, 161, 35);
+      box-shadow: 0 0 1px rgb(0, 255, 13), 0 2px 12px .2px rgb(16, 121, 3);
+      cursor: pointer;
+    }
+
+    .user-comments textarea {
+      resize: none;
+      width: 50%;
+      height: 30px;
+      border-radius: 7px;
+    }
+
+    .user-comments textarea:active {
+      border: #6e5f1d 2px solid;
+    }
+
+
+    .user-comments textarea:focus {
+      border: #9a9503 2px solid;
+      box-shadow: 0 0 1px rgb(72, 79, 27), 0 2px 12px .2px rgb(144, 123, 16);
+    }
+
+
+    .user-comments textarea:hover {
+      border: #a98917 2px solid;
+      box-shadow: 0 0 1px rgb(135, 126, 2), 0 2px 12px .2px rgb(121, 90, 12);
+    }
+
+
+    #Likes {
+      cursor: pointer;
+    }
+
+    i#like:hover {
+      transform: rotate(-7deg);
+     scale: 1.8;
+     color: rgb(21, 38, 220);
+     cursor: pointer;
+     box-shadow: 0 0 1px rgb(2, 35, 96), 0 2px 12px .2px rgb(1, 4, 57);
+    }
+
+    i#share:hover {
+      transform: rotate(-7deg);
+     scale: 1.8;
+     color: rgba(35, 130, 0, 0.495);
+     cursor: pointer;
+     box-shadow: 0 0 1px rgb(23, 53, 25), 0 2px 12px .2px rgb(107, 195, 95);
+    }
+
+
+    /* Sección de servicios */
+    .services {
+      padding: 15px;
+    }
+
+    .services img {
+      width: 40%;
+      transform: rotate(40deg);
+      box-shadow: 3px -1px 38px 3px rgb(161, 158, 158);
+      border-radius: 20% 20% 20% 0%;
+      padding-left: 10px;
+      padding-top: 4px;
+      border-bottom: 1px solid white;
+      border-right: 1px solid white;
+    }
+
+    .services img:hover {
+      transform: rotate(360deg);
+      scale: 1.1;
+      box-shadow: 3px 1px 38px 3px rgb(161, 158, 158), 3px -1px 38px 3px rgb(161, 158, 158), 0 0 0 29px 1px silver;
+    }
+
+        /* Sección de Precios */
+    .prices {
+      padding: 0;
+    }
+
+
+    .prices h1 {
+      font-size: 2.7rem;
+      padding: 10px;
+      text-align: center;
+      margin: 50px 0;
+      text-shadow: 0 1px 1px rgb(183, 183, 183), 0 2px 2px rgb(72, 72, 72), 0 1px 20px rgb(50, 49, 49);
+
+    }
+
+    .prices img {
+      width: 20%;
+      margin-top: 20px;
+      text-align: center;
+      border-radius: 50%;
+      border: 2px groove rgb(3, 3, 3);
+      box-shadow: 3px -1px 38px 3px rgb(161, 158, 158);
+    }
+
+    .prices img:hover {
+      scale: 1.1;
+      box-shadow: 3px -3px 18px 5px rgb(6, 6, 6);
+    }
+
+    #price1 {
+      width: 100%;
+      background-image: url(../imagenes/price.png);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: unset;
+      box-shadow: 3px -1px 38px 3px rgb(161, 158, 158);
+      border-radius: 5px;
+    }
+
+    #price2 {
+      width: 100%;
+      background-image: url(../imagenes/price2.png);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: unset;
+      box-shadow: 3px -1px 38px 3px rgb(161, 158, 158);
+      border-radius: 5px;
+    }
+
+    #price3 {
+      width: 100%;
+      background-image: url(../imagenes/price3.png);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: unset;
+      box-shadow: 3px -1px 38px 3px rgb(161, 158, 158);
+      border-radius: 5px;
+    }
+
+    #price4 {
+      width: 100%;
+      background-image: url(../imagenes/price4.png);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: unset;
+      box-shadow: 3px -1px 38px 3px rgb(161, 158, 158);
+      border-radius: 5px;
+    }
+
+    #price5 {
+      width: 100%;
+      height: auto;
+      background-image: url(../imagenes/price5.png);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: unset;
+      box-shadow: 3px -1px 38px 3px rgb(161, 158, 158);
+      border-radius: 5px;
+    }
+
+    
+    #price6 {
+      width: 100%;
+      height: auto;
+      background-image: url(../imagenes/price6.jpg);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: unset;
+      box-shadow: 3px -1px 38px 3px rgb(161, 158, 158);
+      border-radius: 5px;
+    }
+
+    /* Sección de precios animación */
+
+    #price1:hover {
+     scale: 1.2;
+     box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+    }
+
+    #price2:hover {
+      scale: 1.3;
+      box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+     }
+
+     #price3:hover {
+      scale: 1.3;
+      box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+     }
+
+     #price4:hover {
+      scale: 1.3;
+      box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+     }
+
+     #price5:hover {
+      scale: 1.3;
+      box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+     }
+
+     #price6:hover {
+      scale: 1.3;
+      box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+     }
+
+    /* Sección de precios */
+    #price1 h3, p {
+      font-size: 1.5rem;
+      padding: 10px;
+      text-align: center;
+      text-shadow: 0 1px 1px rgb(255, 255, 255), 0 2px 2px rgb(181, 181, 181), 0 1px 20px rgb(224, 224, 224);
+    }
+
+    #price2 h3, p {
+      font-size: 1.9rem;
+      padding: 10px;
+      text-align: center;
+      text-shadow: 0 1px 1px rgb(255, 255, 255), 0 2px 2px rgb(181, 181, 181), 0 1px 20px rgb(224, 224, 224);
+    }
+
+    #price3 h3, p {
+      font-size: 1.5rem;
+      padding: 10px;
+      text-align: center;
+      text-shadow: 0 1px 1px rgb(255, 255, 255), 0 2px 2px rgb(181, 181, 181), 0 1px 20px rgb(224, 224, 224);
+    }
+
+    #price4 h3, p {
+      font-size: 1.5rem;
+      padding: 10px;
+      text-align: center;
+      text-shadow: 0 1px 1px rgb(255, 255, 255), 0 2px 2px rgb(181, 181, 181), 0 1px 20px rgb(224, 224, 224);
+    }
+
+    #price5 h3, p {
+      font-size: 1.5rem;
+      padding: 10px;
+      text-align: center;
+      text-shadow: 0 1px 1px rgb(255, 255, 255), 0 2px 2px rgb(181, 181, 181), 0 1px 20px rgb(224, 224, 224);
+    }
+
+    #price6 h3, p {
+      font-size: 1.5rem;
+      padding: 10px;
+      text-align: center;
+      text-shadow: 0 1px 1px rgb(255, 255, 255), 0 2px 2px rgb(181, 181, 181), 0 1px 20px rgb(224, 224, 224);
+    }
+
+    .prices-text h1{
+      text-shadow: 0 1px 1px rgb(204, 204, 204), 0 2px 2px rgb(136, 136, 136), 0 1px 20px rgb(101, 101, 101);
+      font-size: 1.9rem;
+      text-align: center;
+    }
+
+    .prices-text p{
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    /* Sección Domicilio */
+    .address {
+      text-align: center;
+    }
+
+    .address h2, h3 {
+      font-size: 1.8rem;
+      text-shadow: 0 1px 1px rgb(204, 204, 204), 0 2px 2px rgb(194, 194, 194), 0 1px 20px rgb(207, 207, 207);
+    }
+
+    
+   .address i#whatsapp {
+    font-size: 20px;
+    margin: 3px;
+    padding: 5px;
+    background-color: green;
+    color: #fff;
+    border-radius: 40%;
+    border: 2px groove #0b4306;
+   }
+
+   .address i#whatsapp:hover {
+    scale: 1.5;
+    box-shadow: 1px 1px 15px rgb(3, 76, 10);
+   }
+
+   .address i#gmail {
+    font-size: 20px;
+    margin: 3px;
+    padding: 5px;
+    background-color: red;
+    border-radius: 40%;
+    color: #fff;
+    border: 2px groove #980909;
+   }
+
+   .address i#gmail:hover {
+    scale: 1.5;
+    box-shadow: 1px 1px 15px rgb(252, 2, 2);
+   }
+
+    /* Sección Formulario */
+    #section_form_contain {
+      float: none;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin: 20px auto;
+    }
+   
+    section#text_form_inputs {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      margin: 10px auto;
+    }
+
+    div.text_form_div {
+      width: 100%;
+      margin: 10px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div.form_user_contain {
+      width: 100%;
+      margin: 20px auto;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .input-space {
+      margin: 5px auto;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px auto;
+      border: #000 solid 2px;
+      border-radius: 7px;
+    }
+
+    input:focus {
+      cursor: pointer;
+      border: #101554 solid 1px;
+    }
+    
+    input:active {
+      cursor: pointer;
+      border: #090931 solid 1px;
+    }
+
+    input:hover {
+      cursor: pointer;
+      border: #0b10a9 solid 2px;
+      box-shadow: 0 1px 1px rgb(24, 24, 154), 0 0 10px rgb(2, 2, 82);
+    }
+
+    .submit {
+      width: 50%;
+      margin: 5px auto;
+    }
+
+    #send {
+      width: 100%;
+      background-color: #0d00ff;
+      color: #fff;
+      padding: 7px 40px;
+      margin: 7px auto;
+      border: #000 solid 2px;
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    #send:focus {
+      cursor: pointer;
+      box-shadow: 0 1px 1px rgb(24, 24, 154), 0 0 10px rgb(2, 2, 82);
+      text-shadow: 0 1px 1px rgb(24, 24, 154), 0 0 10px rgb(2, 2, 82);
+      border: #fff 1px groove;
+    }
+
+
+    #send:active {
+      cursor: pointer;
+      box-shadow: 0 1px 1px rgb(24, 24, 154), 0 0 10px rgb(2, 2, 82);
+      text-shadow: 0 1px 1px rgb(24, 24, 154), 0 0 10px rgb(2, 2, 82);
+      border: #fff 1px groove;
+    }
+
+
+    #send:hover {
+      cursor: pointer;
+      box-shadow: 0 1px 1px rgb(24, 24, 154), 0 0 10px rgb(2, 2, 82);
+      text-shadow: 0 1px 1px rgb(24, 24, 154), 0 0 10px rgb(2, 2, 82);
+      border: #fff 1px groove;
+    }
+
+    /* Footer */
+    #footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: auto;
+      height: auto;
+      padding: 10px;
+      color: #fff;
+      background-color: #000;
+    }
+
+    .contain_footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      background-color: #000;
+      color: #fff
+    }
+
+    #my-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+      margin: 0;
+      background-color: #000;
+    }
+
+    .contents {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      background-color: #000;
+      height: auto;
+      color: #fff
+    }
+
+    .social-media {
+      width: 33%;
+      position: relative;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .email {
+      width: 33%;
+      position: relative;
+      padding: 0;
+      text-align: center;
+    }
+
+    .copy {
+      width: 33%;
+      position: relative;
+      padding: 0;
+      text-align: center;
+    }
+
+   footer i {
+    padding: 0;
+    margin: 5px;
+   }
+
+   footer h4 {
+    color: #fff;
+   }
+
+   footer p {
+    font-size: 20px;
+    text-shadow: 0 0 10px black;
+    color: #fff;
+   }
+   footer a.icono {
+    text-decoration: none;
+   }
+
+   .copy p a {
+    cursor: pointer;
+    scale: 1.3;
+   }
+
+   .copy p a:hover {
+    color: rgb(255, 255, 255);
+    scale: 1.2;
+    text-shadow: 0 1px 1px rgb(43, 43, 239), 0 0 1px rgb(43, 43, 239);;
+   }
+
+   /* Iconos */
+
+   i#facebook {
+    font-size: 18px;
+    padding: 5px;
+    color: rgb(16, 16, 203);
+    background-color: #fff;
+    border-radius: 40%;
+    border: 1px groove rgb(16, 16, 203);
+   }
+
+   i#facebook:hover {
+    scale: 1.5;
+    box-shadow: 2px 2px 5px white;
+   }
+
+   i#instagram {
+    font-size: 18px;
+    padding: 5px;
+    color: #c26f4e ;
+    background-color: #fff;
+    border-radius: 40%;
+    border: 1px groove rgb(233, 152, 71);
+   }
+
+   i#instagram:hover {
+    scale: 1.5;
+    box-shadow: 2px 2px 5px white;
+   }
 
    
+   i#twitter {
+    font-size: 18px;
+    padding: 5px;
+    color: rgb(80, 135, 218);
+    background-color: #fff;
+    border-radius: 40%;
+    border: 1px groove rgb(49, 107, 215);
+   }
 
-/* ==========================================================================
+   i#twitter:hover {
+    scale: 1.5;
+    box-shadow: 2px 2px 5px white;
+   }
+
+     
+   i#tiktok {
+    font-size: 18px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    border-radius: 40%;
+    border: 1px groove rgb(255, 255, 255);
+   }
+
+   i#tiktok:hover {
+    scale: 1.5;
+    box-shadow: 2px 2px 5px white;
+   }
+
+   
+   i#youtube {
+    font-size: 18px;
+    padding: 5px;
+    color: red;
+    border-radius: 40%;
+    background-color: #fff;
+    border: 1px groove #f00808;
+   }
+
+   i#youtube:hover {
+    scale: 1.5;
+    box-shadow: 2px 2px 5px white;
+   }
+
+   footer i#whatsapp {
+    font-size: 18px;
+    padding: 5px;
+    color: green;
+    background-color: #fff;
+    border-radius: 40%;
+    border: 1px groove #0b7801;
+   }
+
+   footer i#whatsapp:hover {
+    scale: 1.5;
+    box-shadow: 2px 2px 5px white;
+   }
+
+   footer i#gmail {
+    font-size: 18px;
+    padding: 5px;
+    color: red;
+    border-radius: 40%;
+    background-color: #fff;
+    border: 1px groove #f00808;
+   }
+
+   footer i#gmail:hover {
+    scale: 1.5;
+    box-shadow: 2px 2px 5px white;
+   }
+
+   
+   */
+/* 
+==========================================================================
    Helper classes
    ========================================================================== */
 
@@ -865,8 +1110,122 @@ font-size: 1rem;
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
+  
+  .container {
+    margin: 0;
+  }
+  .container-grid {
+    margin: 0;
+  }
+  .columns1-1 {
+    margin: 1px;
+    padding: 5px;
+  }
+ .cont-img .img-barber {
+    width: 50%;
+  }
+  
+       /* Sección de precios*/
+
+       .prices {
+        padding: 10px;
+       }
+
+     /* Sección de precios animación */
+
+     #price1:hover {
+      scale: 1.1;
+      box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+     }
+ 
+     #price2:hover {
+       scale: 1.1;
+       box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+      }
+ 
+      #price3:hover {
+       scale: 1.1;
+       box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+      }
+ 
+      #price4:hover {
+       scale: 1.1;
+       box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+      }
+ 
+      #price5:hover {
+       scale: 1.1;
+       box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+      }
+ 
+      #price6:hover {
+       scale: 1.1;
+       box-shadow: 1px 1px 0 black, 1px 1px 0 blue, 1px 1px 10px rgb(126, 126, 126);
+      }
+
+    /* Footer */
+    #footer {
+      display: flex;
+      flex-wrap: wrap;
+      width: auto;
+      height: auto;
+      color: #fff;
+    }
+
+    .contain_footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 5px;
+      color: #fff
+    }
+
+    #my-footer {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 10px;
+      padding: 5px;
+      background-color: #000;
+    }
+
+    .contents {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 20px;
+      padding: 10px;
+      background-color: #000;
+      height: auto;
+      color: #fff
+    }
+
+    .social-media {
+      width: 100%;
+      position: relative;
+      padding: 0;
+      text-align: center;
+    }
+
+    .email {
+      width: 100%;
+      position: relative;
+      padding: 0;
+      text-align: center;
+    }
+
+    .copy {
+      width: 100%;
+      position: relative;
+      padding: 0;
+      text-align: center;
+    }
 }
 
 @media print,

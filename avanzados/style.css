@@ -1,0 +1,598 @@
+/* Generales */
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Manrope:wght@500;700&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(360deg, #2679a3 0%, #092327 100%);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    width: 100%;
+    max-height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 auto 2% auto;
+    background-color: white;
+    box-shadow: .1rem .1rem 1rem .1rem rgb(112, 217, 224);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Botón */
+.boton {
+  width: 30%;
+  float: left;
+  background-color: #3498DB;
+  color: white;
+  padding: 1% 5%;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0 auto 1% auto;
+}
+
+.boton:hover, .boton:focus {
+  background-color: #6caed9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: .1rem .1rem 1rem .1rem rgba(0, 0, 0, 0.297);
+}
+
+/* Div desplegable */
+.desplegable { /* div */
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* Parráfo desplegable */
+.contenidoDesplegable {
+  width: 100%;
+  display: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+
+/* Parráfo desplegable links */
+.contenidoDesplegable a {
+  color: black;
+  padding: 0 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+/* Enlaces del menú */
+.desplegable a:hover {
+  background-color: #0d537b;
+  color: white;
+  box-shadow: .1rem .1rem 1rem .1rem rgba(0, 0, 0, 0.422);
+}
+  
+  /* Clase asignada a la función */
+  .show {display: flex}
+
+.texts__header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+  position: relative;
+  margin-top: 3rem;
+}  
+
+.header--title {
+    transition: ease-out;
+    transition-duration: 3s;
+    transform-origin: right;
+    font-size: 6rem;
+    text-align: center;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: rgb(16, 137, 153);
+    text-shadow: 1rem 1rem .2rem rgba(17, 206, 244, 0.306);
+    margin: 0 auto;
+}
+
+.header__title--relevant {
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: #1a262e;
+    font-weight: bold;
+    text-shadow: 1rem 1rem .2rem rgba(18, 19, 19, 0.306);
+}
+
+.header--subtitle {
+  transition: ease-in-out;
+  transition-duration:3s; 
+  font-size: 1.7rem;
+    padding: 0 12%;
+    color: rgb(1, 1, 1);
+    text-shadow: -.7rem -.7rem .2rem rgba(115, 226, 248, 0.336);
+    margin: 0 auto;
+}
+
+.photo {
+    width: 30%;
+    border: 2px white solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.photo--header {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 10px;
+    padding: 0;
+}
+
+/* Seccion de mi información */
+#info {
+  /* FF 3.5+*/
+-moz-column-count: 4;
+-moz-column-gap: 8px;
+-moz-column-rule: double;
+/*Saf3, Chrome*/
+-webkit-column-count: 4;
+-webkit-column-gap: 8px;
+-webkit-column-rule: double;
+column-count: 4;
+column-gap: 8px;
+column-rule: double;
+height: 400px;
+color: #092327;
+padding: 2%;
+height: auto;
+color: white;
+box-shadow: .1rem .1rem 1rem .1rem rgba(255, 255, 255, 0.678);
+background: linear-gradient(360deg, #1f323e 0%, #033c46 100%);
+}
+
+
+/* Columnas divididas */
+#articles {
+  /* FF 3.5+*/
+-moz-column-count: 3;
+-moz-column-gap: 8px;
+-moz-column-rule: ridge;
+/*Saf3, Chrome*/
+-webkit-column-count: 3;
+-webkit-column-gap: 8px;
+-webkit-column-rule: ridge;
+column-count: 3;
+column-gap: 8px;
+column-rule: ridge;
+margin: 2% auto;
+background-color: white;
+}
+
+#card {
+  padding: 1%;
+  margin: 2% auto;
+}
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .contenedor {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin: 3% auto;
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .miDiapositiva {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .anterior,
+  .siguiente {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .siguiente {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .anterior:hover,
+  .siguiente:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numeroTexto {
+    color: #131212;
+    font-size: 14px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .subtitulosContenedor {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .fila:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .columna {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  /* Footer */
+  footer{
+    margin-top: 5%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #ffffff;
+    padding: 2%;
+  }
+
+  @media (min-width:120px) and (max-width:500px) {
+    /* ... */
+    /* Generales */
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Manrope:wght@500;700&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(360deg, #2679a3 0%, #092327 100%);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 auto 2% auto;
+    background-color: white;
+    box-shadow: .1rem .1rem 1rem .1rem rgb(112, 217, 224);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Botón */
+.boton {
+  width: 100%;
+  background-color: #3498DB;
+  color: white;
+  padding: 1% 10%;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0 auto 2% auto;
+}
+
+.boton:hover, .boton:focus {
+  background-color: #6caed9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: .1rem .1rem 1rem .1rem rgba(0, 0, 0, 0.297);
+  border: groove 2px rgba(0, 0, 0, 0.379);
+  border-top: none;
+}
+
+/* Div desplegable */
+.desplegable { /* div */
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 10%;
+}
+
+/* Parráfo desplegable */
+.contenidoDesplegable {
+  width: 100%;
+  height: auto;
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 9%;
+  padding: 0;
+  border-radius: 10px;
+}
+
+/* Links del parráfo*/
+.contenidoDesplegable a {
+  color: black;
+  padding: 1% 2%;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  margin: 0 2% 1% 2%;
+}
+
+/* Enlaces del menú */
+.desplegable a:hover {
+  background-color: #0d537b;
+  color: white;
+  box-shadow: .1rem .1rem 1rem .1rem rgba(0, 0, 0, 0.422);
+}
+
+.desplegable a:active{
+    background-color: #30556a;
+    color: white;
+    box-shadow: .1rem .1rem .4rem .1rem rgba(0, 0, 0, 0.929);
+  }
+  
+  /* Clase asignada a la función */
+  .show {display: flex}
+
+.texts__header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  margin: 3rem auto 0 auto;
+}  
+
+.header--title {
+    transition: ease-in-out;
+    transition-duration: 3s;
+    transform-origin: right;
+    font-size: 3.1rem;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: rgb(16, 137, 153);
+    text-shadow: 1rem 1rem .2rem rgba(17, 206, 244, 0.306);
+    margin: 0;
+}
+
+.header__title--relevant {
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: #1a262e;
+    font-weight: bold;
+    text-shadow: 1rem 1rem .2rem rgba(18, 19, 19, 0.306);
+
+}
+
+.header--subtitle {
+  transition: ease-in-out;
+  transition-duration: 1s; 
+  font-size: 1rem;
+    padding: 0 12%;
+    color: rgb(1, 1, 1);
+    text-shadow: -.7rem -.7rem .2rem rgba(115, 226, 248, 0.336);
+    margin: 0 auto 1rem auto;
+}
+
+.photo {
+    display: none;
+    width: 100%;
+    border: 2px white solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+.photo--header {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 0;
+}
+
+/* Seccion de mi información */
+#info {
+  /* FF 3.5+*/
+-moz-column-count: 2;
+-moz-column-gap: 10px;
+-moz-column-rule: double;
+/*Saf3, Chrome*/
+-webkit-column-count: 1;
+-webkit-column-gap: 8px;
+-webkit-column-rule: double;
+column-count: 2;
+column-gap: 8px;
+column-rule: double;
+height: 400px;
+color: #092327;
+padding: 0;
+height: auto;
+color: white;
+box-shadow: .1rem .1rem 1rem .1rem rgba(255, 255, 255, 0.678);
+background: linear-gradient(360deg, #1f323e 0%, #033c46 100%);
+}
+
+#info p {
+    padding: 0 1%;
+}
+
+/* Columnas divididas */
+#articles {
+  /* FF 3.5+*/
+-moz-column-count: 2;
+-moz-column-gap: 8px;
+-moz-column-rule: ridge;
+/*Saf3, Chrome*/
+-webkit-column-count: 2;
+-webkit-column-gap: 8px;
+-webkit-column-rule: ridge;
+column-count: 2;
+column-gap: 8px;
+column-rule: ridge;
+margin: 2% auto;
+background-color: white;
+}
+
+#card {
+  padding: 1%;
+  margin: 2% auto;
+}
+
+/* Posicionar el contenedor de la imagen (necesario para posicionar las flechas izquierda y derecha) */ 
+ .container{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+/* Ocultar las imágenes por defecto */
+.miDiapositiva {
+    display: none;
+  }
+  
+/* Agregue un puntero al pasar el mouse sobre las imágenes en miniatura */
+  .cursor {
+    cursor: pointer;
+  }
+  
+/* Botones siguiente y anterior */  .anterior,
+  .siguiente {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+/* Coloca el "botón siguiente" a la derecha */  .siguiente {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+/* Al pasar el mouse, agregue un color de fondo negro con un poco de transparencia */
+  .anterior:hover,
+  .siguiente:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+/* Texto numérico (1/3, etc.) */
+  .numeroTexto {
+    color: #000000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+/* Contenedor para texto de imagen */  .subtitulosContenedor {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .fila:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+/* Seis columnas una al lado de la otra */  .columna {
+    float: left;
+    width: 16.66%;
+  }
+  
+/* Agrega un efecto de transparencia para las imágenes en miniatura */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  /* Footer */
+  footer{
+    margin-top: 5%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #ffffff;
+    padding: 2%;
+  }
+  
+  }

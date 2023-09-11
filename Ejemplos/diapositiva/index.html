@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diapositiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+   <!-- contenedor de presentación de diapositivas -->
+<div class="container-presentacionDiapositiva">
+    <h3 style="margin-bottom: 1rem;" class="title-diapositiva">Certificados</h3>
+<!-- Imágenes de ancho completo con número y texto de subtítulos -->
+<div class="miDiapositiva fade">
+  <div class="numbertext">1 / 7</div>
+  <img width="400" src="../certificados/Tecnicoenintegridadweb.jpg" alt="Certificación Técnico en integridad web" style="width:100%">
+  <div class="text">Diplomado Técnico en Integridad Web</div>
+</div>
+
+<div class="miDiapositiva fade">
+  <div class="numbertext">2 / 7</div>
+  <img width="900" src="../certificados/Desingthinking.png" style="width:100%">
+  <div class="text">Desing Thinking</div>
+</div>
+
+<div class="miDiapositiva fade">
+  <div class="numbertext">3 / 7</div>
+  <img width="400" src="../certificados/Desarrolladordecontenidodigital.jpg " style="width:100%" alt="Certificación de desarrollador de contenido didital">
+  <div class="text">Desarrollo de Contenido Digital</div>
+</div>
+
+<div class="miDiapositiva fade">
+    <div class="numbertext">4 / 4</div>
+    <img width="400" src="../certificados/Asistenteweb.jpg" style="width:100%" alt="Certificación asistente web">
+    <div class="text">Asistente Web</div>
+  </div>
+  <div class="miDiapositiva fade">
+    <div class="numbertext">5 / 5</div>
+    <img width="400" src="../certificados/Finder.jpg" style="width:100%">
+    <div class="text">Finder</div>
+  </div>
+  <div class="miDiapositiva fade">
+    <div class="numbertext">6 / 6</div>
+    <img width="400" src="../certificados/Gestordeimagenweb.jpg" style="width:100%">
+    <div class="text">Gestor de imagen web</div>
+  </div>
+  <div class="miDiapositiva fade">
+    <div class="numbertext">7 / 7</div>
+    <img width="400" src="../certificados/Tester.jpg" style="width:100%">
+    <div class="text">Tester</div>
+  </div>
+<!-- Botones siguiente y anterior -->
+<a class="prev" onclick="siguienteDiapositiva(-1)">&#10094;</a>
+<a class="next" onclick="siguienteDiapositiva(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- Los puntos/círculos -->
+<div style="text-align:center">
+<span class="punto" onclick="diapositivaActual(1)"></span>
+<span class="punto" onclick="diapositivaActual(2)"></span>
+<span class="punto" onclick="diapositivaActual(3)"></span>
+<span class="punto" onclick="diapositivaActual(4)"></span>
+<span class="punto" onclick="diapositivaActual(5)"></span>
+<span class="punto" onclick="diapositivaActual(6)"></span>
+<span class="punto" onclick="diapositivaActual(7)"></span>
+</div> 
+</main>
+<!-- Scripts-->
+
+</body>
+</html>

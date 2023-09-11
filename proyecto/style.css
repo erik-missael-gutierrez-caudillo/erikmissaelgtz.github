@@ -1,0 +1,364 @@
+/* Generales */
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Lato:wght@300;400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%s;
+}
+
+*,*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f2f2f2;
+ /* font-family: 'Bellefair', serif;*/
+  /*font-family: 'Lato', sans-serif;*/
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+p, li {
+  font-family: Bellafair, serif;
+}
+
+.container {
+  width: auto;
+  margin: 40px;
+  padding: 0;
+}
+
+span {
+  color: #1ed223;
+}
+
+.ul {
+  list-style: none;
+}
+
+.clear, .clear:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Grid */
+@media only screen and (min-width:768px) {
+  .container-grid {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 15px;
+  }
+  .container-grid:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  [class*="column"] {
+    padding: 0 10px;
+    float: left;
+  }
+  .column1-4 {
+    width: 25%;
+  }
+  .column2-4 {
+    width: 50%;
+  }
+  .column3-4 {
+    width: 75%;
+  }
+  .column1-3 {
+    width: 33.3%;
+  }
+  .column2-3 {
+    width: 25%;
+  }
+}
+
+div.hero {
+  background-image: url(../proyecto/proyectoudemy/imagenesproyecto1udemy/Imagenes-master/img/background01.jpg);
+  height: 100vh;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.content-header {
+  padding-top: 40px;
+}
+
+.logo {
+  float: left;
+  margin-left: 50px;
+  margin-top: -30px;
+}
+
+img.logotipo {
+  width: 250px;
+  margin-left: 20px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 70px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li:not(:first-child) {
+margin-left: 48px;
+}
+
+nav ul li:last-child {
+  margin-right: 24px;
+}
+
+nav ul .line a {
+  padding: 20px 10px;
+  display: inline-block;
+  outline: none;
+  color: #278F02;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+}
+ 
+nav ul li a:hover {
+  border-bottom: 5px solid #1ed223;
+}
+
+/* Animación avanzada */
+@media only screen and (max-width:864px) {
+  
+  .logo {
+    padding: 0;
+  }
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #fff;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  .nav-wrapper ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .nav-wrapper ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  .nav-wrapper ul li:nth-child(1) a {
+    transition-delay: 0.2s;
+  }
+  
+  .nav-wrapper ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+  }
+  .nav-wrapper ul li:nth-child(3) a {
+    transition-delay: 0.4s;
+  }
+  .nav-wrapper ul li:nth-child(4) a {
+    transition-delay: 0.5s;
+  }
+  
+  .nav-wrapper ul li:not(:first-child) a {
+    margin-left: 0;
+  }
+  .nav-wrapper ul li a {
+    padding: 10px 24px;
+    opacity: 0;
+    color: #3b9009;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    transform:translateX(-20px);
+    transition: all 0.2s ease;
+  }
+  .nav-btn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 50%;
+  }
+  .nav-btn i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #000;
+    border-radius: 2px;
+    margin-left: 14px;
+  }
+  .nav-btn i:nth-child(1) {
+    margin-top: 16px;
+  }
+  .nav-btn i:nth-child(2) {
+    margin-top: 4px;
+    opacity: 1;
+  } .nav-btn i:nth-child(3) {
+    margin-top: 4px;
+  }
+}
+#nav:checked + .nav-btn {
+  transform: rotate(45deg);
+}
+#nav:checked + .nav-btn i {
+  background: #000;
+  transition: transform 0.2s ease;
+}
+#nav:checked + .nav-btn i:nth-child(1){
+  transform: translateY(6px) rotate(180deg);
+}
+#nav:checked + .nav-btn i:nth-child(2){
+  opacity: 0;
+}
+#nav:checked + .nav-btn i:nth-child(3){
+  transform: translateY(-6px)rotate(90deg);
+}
+#nav:checked ~ .nav-wrapper {
+  z-index: 9990;
+  opacity: 1;
+}
+#nav:checked ~ .nav-wrapper ul li a {
+  opacity: 1;
+  transform: translateX(0);
+}
+.hidden {
+  display: none;
+}
+
+/* Información */
+.heading {
+  color: #276f02;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.heading span {
+  font-size: 28px;
+  display: table;
+  margin: 0 auto;
+  color: #1ed900;
+}
+
+img.planta {
+  height: 50px;
+}
+
+blockquote {
+  color: #3b9009;
+  font-size: 28px;
+  border-left: 7px solid #1ed223;
+  padding: 9px 20px;
+}
+
+.content-principal p {
+  padding: 2px 0 2px 20px;
+}
+
+.content-principal p {
+  line-height: 30px;
+}
+
+.img-principal {
+  text-align: center;
+  margin: 0 auto;
+}
+
+img.efect-img {
+width: 75%;
+margin-bottom: 10px;
+}
+
+.efect-img {
+  transform: rotate(-10deg);
+}
+
+/* Información de caja  info-boxes */
+
+div.info-boxes > div {
+  text-align: center;
+}
+
+div.info-boxes > div img {
+width: 100%;
+}
+
+
+
+/* Smartphones*/
+@media only screen and (min-width: 480px) {
+  
+  div.info-boxes > div {
+    width: 50%;
+    float: left;
+  }
+  div.info-boxes > div:last-child {
+    width: 100%;
+  }
+}
+
+
+/* Tabletas */
+@media only screen and (min-width:768px) {
+  div.info-boxes > div,
+  div.info-boxes > div:last-child {
+    width: 33.3%;
+  }
+  div.info-boxes > div:nth-child(1) {
+    background-color: #f2f2f2;
+  }
+  div.info-boxes > div:nth-child(2) {
+    background-color: #f2f2f2;
+  }
+  div.info-boxes > div:nth-child(3) {
+    background-color: #f2f2f2;
+  }
+  div.content-box {
+    padding: 20px 5px 5px 5px;
+  }
+}
+
+
+/* Portatiles */
+@media only screen and (min-width:992px) {
+  div.content-box {
+    padding: 72px 0;
+  }
+  div.content-box h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  .info-boxes.container.clear {
+    margin: 23px;
+  }
+}
