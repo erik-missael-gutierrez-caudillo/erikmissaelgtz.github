@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <title>Referencias JavaScript En El DOM</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Referencias JavaScript para el DOM</title>
@@ -10,242 +11,73 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <div class="container">
-    <div class="sub-container">
-        <div class="code">
-          <!-- Párrafo con color de fondo -->
-          <p class="indication"><span>Para consultar el tipo de elemento en la consola</span></p><br>
-          <p>Usa: <code>console.log(typeof);</code></p></code></p><br>
-          <p><span>Nota:</span>En el parentésis agrega la clase, el id, o el nombre de la etiqueta del elemento que deseas.</p><br><br>
-            <!-- Párrafo con color de fondo -->
-            <p class="indication"><span>Buscar Elementos con JavaScript.</span></p><br>
-            <p><code>console.log(title.innerText); <-----devuelve el texto interno del elemento</code></p><br>
-                <p><code> console.log(title.tagName); <----- devuelve el nombre de la etiqueta </code></p><br>
-                <p><code>Si devuelve Null <---- significa que no existe</code></p>
-                <p><code>console.log(title.tagName);</code></p>              
-                   <p><code>1.-Buscar elemento por ID // ----> document.getElementById('')</code></p>
-                   <p><code> const contenedor = document.getElementById('title');</code></p>
-                    <p><code>console.log(contenedor);</code></p>
-                    <p><code>   2.- Buscar elemento por nombre de clase //---> document.getElementsByClassName('')</code></p>
-        <p><code>const toppings = document.getElementsByClassName('topping');</code></p>
-        <p><code>console.log(toppings[0].id);</code></p>
-        <p><code>const toppingsFondoMarron = document.getElementsByClassName('fondo-marron');</code></p>
-        <p><code>console.log(toppingsFondoMarron);</code></p>
-        <p><code>3.- Buscar elemento por nombre de etiqueta // ----> document.getElementsByTagName('')</code></p>
-        <p><code>const misToppings = document.getElementsByTagName('li');</code></p>
-        <p><code>console.log(misToppings);</code></p>
-        <p><code>4.- Buscar por descripción // Usar para ser mas específico //--> document.querySelector('')</code></p>
-        <p><code>const aceituna = document.querySelector('#aceitunas');</code></p>
-        <p><code>console.log(aceitunas);</code></p>
-        <p><code>const primerTopping = document.querySelector('.topping.fondo-naranja');</code></p>
-        <p><code>console.log(primerTopping);</code></p>
-        <p><code>const fondoNaranja = document.querySelector('ul li.fondo-naranja');</code></p>
-        <p><code>console.log(fondoNaranja);</code></p>
-        <p><code>const primerToppingNoMarron = document.querySelector('ul li:not(.fondo-marron)');</code></p>
-        <p><code>console.log(primerToppingNoMarron);</code></p>
-        <p><code>Selecciona todos los elementos con la especificación que utilice</code></p>
-        <p><code>document.querySelectorAll('')</code></p>
-        <p><code>const toppingsNaranja = document.querySelectorAll('.topping.fondo-naranja');</code></p>
-                <p><code>console.log(toppingsNaranja);</code></p>
-                <p><code>console.log(toppingsNaranja[0]);</code></p>
-                <p><code>console.log(toppingsNaranja[1]);</code></p>
-                </code></p>
-        </div>
+    <!-- Contenedor -->
+   <div id="uno" class="container">
 
-        <!--'use strict'***//----------------------------------***// 5.- Aplicar estilos con Javacript     //const// primerTopping1 = document.querySelector('.topping');           //console.log(primerTopping1.style);***//primerTopping1.style.backgroundColor = 'blue';***//primerTopping1.style.color = '#fff';    //primerTopping1.style.textTransform ='upperCase';*** //------------------***// 6.- Acceder al texto con JavaScript***//const// listaDeToppings=document.getElementById('list-toppings');  // .innerText ----- texto interno          //console.log(listaDeToppings.innerText);            // .textContent ------ texto indentado .........          //console.log(listaDeToppings.textContent);
-            // .innerHTML ---- estructura de texto HTML 
-            //console.log(listaDeToppings.innerHTML);
-            
-            //---------------------------------
-            // 7.- Cambiar el contenido HTML con JavaScript
-            
-            //const// title = document.getElementById('title');
-            // console.log(title.innerHTML); 
-            
-            // Reemplazar Texto de title
-            //title.innerText = 'Mis Toppings Favoritos';
-            
-            //----------------------------------
-            // 8.- Cambiar atributos con JavaScript
-            
-            //const// enlace = document.getElementsByTagName('a');
-            // Obtener la dirección del enlace 
-            //console.log(enlace[0].getAttribute('href'));
-            
-            // Eliminar el atributo del enlace
-            //console.log(enlace[0].removeAttribute('href'));
-            
-            // Cambiar el contenido del enlace 
-            //console.log(enlace[0].setAttribute('href', 'https://www.freecodecamp.org'));
-            
-            //----------------------------------
-            // 9.- Cambiar y modificar clases con JavaScript
-            
-            // Seleccionar el elemento 
-            //const// primerLi = document.querySelector('.topping');
-            // Agregar una clase 
-            //primerLi.classList.add('mi-nueva-clase', 'topping');
-            
-            // Seleccionar el elmento
-            //const// primerLiEnUl = document.querySelector('.topping');
-            // Verificar si existe la clase
-            // Mostrar en consola el resultado
-            //console.log(primerLiEnUl.classList.contains('fondo-marron'));
-            
-            // Eliminar una clase 
-            //const// liEnLista = document.querySelector('.topping');
-            //liEnLista.classList.remove('topping');
-            
-            // Mostrar en la consola
-            //console.log(liEnLista);
-            
-            //----------------------------------------
-            // 10.- Crear elementos con JavaScript 
-            
-            // Seleccionar donde voy agregar el elemento
-            //const listaDeToppingsUl = document.getElementById('list-toppings');
-            
-            // Definir el elemento a crear
-            //const toppingNuevo = document.createElement('li');
-            
-            // Agregar clase al elemento
-            //toppingNuevo.classList.add('topping', 'fondo-marron');
-            
-            // Perzonalizar el texto del elemento 
-            //toppingNuevo.innerText = 'Queso Estra';
-            
-            // Agregar el nodo dentro de un elemento 
-            //listaDeToppingsUl.append(toppingNuevo);
-            
-            // Eliminar un nodo de un elemento 
-            //listaDeToppingsUl.remove();
-            
-            // Agregar texto sin etiqueta
-            //listaDeToppingsUl.append('Hola Mundo');
-            
-            
-            // 11.- Recorrer el DOM
-            
-            //const listaDeToppings = document.getElementById('list-toppings');
-            
-            // Seleccionar el elemento padre(incluye solo los elementos HTML en este ejemplo es el div)
-            //console.log(listaDeToppings.parentElement);
-            
-            // Seleccionar el nodo padre(incluye todos los elementos)
-            //console.log(listaDeToppings.parentNode);
-            
-            // Seleccionar el padre del elemento padre
-            //console.log(listaDeToppings.parentElement.parentElement);
-            
-            // Seleccionar los hijos del elemento
-            //console.log(listaDeToppings.children);
-            
-            // Seleccionar el primer hijo del elemento
-            //console.log(listaDeToppings.firstChildchild);
-            
-            // Seleccionar el ultimo hijo del elemento
-            //console.log(listaDeToppings.firstElementChild);
-            
-            // Seleccionar el hermano anterior de un elemento
-            //console.log(listaDeToppings.previousElementSibling);
-            
-            
-            // Seleccionar el hermano siguiente de un elemento
-            //console.log(listaDeToppings.nextElementSibling);
-            
-            // 12.- Escuchar eventos con JavaScript
-            
-            // 1.-Debemos asociar evento y función para reaaccionar si sucede una acción en un elemento
-            
-            // 2.- Elemento target (blanco)
-            // Como referencia se puede decir que es el que recibe un evento
-            // El que alerta sobre el suceso 
-            
-            // 3.-Trigger
-            // Desencadena el evento
-            
-            // 4.- Event Handler
-            // función que se ejecutará cuando ocurre el evento
-            
-            // 5.- Event Listener
-            // "Escuchar un evento"
-            
-            
-            // Función Mostrar Clic 
-            //  !-- Onclick // método sencillo--
-            //  !-- aplicar --------onclick="mostrarClic('')" ----- al elemento HTML
-            /*function mostrarClic(topping) {
-                console.log(topping);
-            }
-            */
-            
-            
-            // Función al hacer clic
-            
-            // Evento
-            // Onclick -------- Add Event Listener
-            
-            // HTML
-            
-            // Asigna el  ------  onclick="nombreDeTuFuncion(parametro)" al elemento
-            // En este ejemplo asigne ---onclick="mostrarClic(topping)" al li con id albahaca
-            /*
-              <div id="container">
-                <h1 id="title">🍕 <br>Toppings de pizza.</h1>
-                <ul id="list-toppings">
-                  <li class="topping fondo-marron" id="aceitunas">Aceitunas</li>
-                  <li class="topping fondo-naranja">Cebollas</li>
-                  <li onclick="mostrarClic(topping)" class="topping fondo-marron" id="albahaca">Albahaca</li>
-                  <li class="topping fondo-naranja">Champinones</li>
-                </ul>
-               </div> 
-            */
-            
-            // JavaScript
-            
-            // 1.- Crea una variable // Ya sea  ------  (var || let || const) la que vayas a utilizar
-            
-            // Variable
-            //  |
-            //  |
-            // Constante // No cambia su valor
-            //  |
-            //  |
-            //  |  Nombre de variable
-            //  |      |        Coge el Elemento del HTML
-            //  |      |                   |   Con Id
-            //  |      |                   |      |    Nombre Id
-            //  |      |                   |      |       |
-             const albahaca = document.getElementById('albahaca');
-            //                  |                     |
-            //                  |           Asigna las comillas // Pueden ser "" o ''
-            //                  |
-            //            Selecciona el documento
-            
-            // 2.- Crea la función 
-            
-            //       Nombre de la función
-            //            |     Elemento utilizado
-            //            |         |  
-            //            |       Parametro
-            //            |         |
-            //            |         |
-             function mostrarClic(e) {
-              alert("La albahaca es una hierba aromática que se emplea tanto con fines culinarios como medicinales. Sirve para aliviar el malestar estomacal y calmar los nervios, y puede ayudar a combatir el insomnio y la fatiga física y mental.¿ Estas seguro de querer suplir este ingrediente?");
-                
-               console.log(e); // Llama la función a mostrar en la consola
-             }
-            
-            // Parametro
-            //   |
-            //   |
-             albahaca.addEventListener('click', mostrarClic);
-            //          |                |            |
-            //          |                |            |
-            // Escucha el evento         |            |
-                               //Que escuchará?       |
-                                            // Que ejecutará?-->
+    <!-- Primer desafio -->
+        <div class="variables" style="color: white;">
+            <h1 id="title">Referencias JavaScript En El DOM</h1>
+            <p>Variables</p>
+            <!-- Pregunta 1 --> 
+            <p id="pregunta1">Tomando en cuenta que el valor final de a es de 6 que valor es el faltante en la variable asignada, ¿Cual es el valor de a?</p>
+            <hr>
+            <p id="a">var a = <textarea id="valorA"></textarea> + 1;</p>
+            <hr>
+            <!-- Pregunta 2 -->
+            <p id="pregunta2">Tomando en cuenta que el valor final de b es de 15 que valor es el faltante en la variable asignada, ¿Cual es el valor de b?</p>
+            <p id="b"> var b = <textarea id="valorB"></textarea> + 5;</p>
+            <hr>
+        </div>
+      
+            <div class="respuestas">
+                <input id="respuestas" type="button" value="Enviar">
+            </div>
+
     </div>
-   </div> 
+
+              <!-- Enviar Al Segundo desafio -->
+                <div id="siguiente" style="color: white;">
+                    <p>Enhorabuena!! vas muy bien, da clic en siguiente para ir al próximo desafio.</p><br>
+                    <input id="desafioDos" type="button" value="siguiente">
+                </div>
+
+                <!-- Intentar nuevamente -->
+            <div id="intentarNuevamente">
+                <p>Vuelve a intentarlo, se que podrás!!</p>
+            <input type="button" id="regresar" value="Intentarlo nuevamente">
+            </div>
+        
+
+
+            <!-- Contenedor -->
+   <div id="dos" class="container">
+
+    <!-- Primer desafio -->
+        <div class="variables" style="color: white;">
+            <h1 id="title">Referencias JavaScript En El DOM</h1>
+            <h2>Variables</h2>
+            <!-- Pregunta 3 --> 
+            <p id="pregunta3">Tomando en cuenta que el valor final de a es de 6 que valor es el faltante en la variable asignada, ¿Cual es el valor de a?</p>
+            <hr>
+            <p id="c">var c = <textarea id="valorA"></textarea> + 1;</p>
+            <hr>
+            <!-- Pregunta 4 -->
+            <p id="pregunta4">Tomando en cuenta que el valor final de a es de 6 que valor es el faltante en la variable asignada, ¿Cual es el valor de b?</p>
+            <p id="d"> var d = <textarea id="valorB"></textarea> + 5;</p>
+            <hr>
+        </div>
+      
+            <div class="respuestas">
+                <input id="respuestas" type="button" value="Enviar">
+            </div>
+
+            <!-- Enviar Al Segundo desafio -->
+            <div class="siguiente">
+                <div id="siguiente-recuadro" style="color: white;">
+                    <h3>Enhorabuena!! vas muy bien, da clic en siguiente para ir al próximo desafio.</h3>
+                </div>
+            </div>
+    </div>
+   <script src=""></script>
 </body>
 </html>

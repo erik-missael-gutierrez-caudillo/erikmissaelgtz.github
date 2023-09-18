@@ -15,73 +15,89 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: rgb(217, 0, 255);
+    background-repeat: unset;
+    background: linear-gradient(180deg, rgb(0, 14, 210) 0%, rgb(0, 20, 56) 100%);
 }
 
-.container {
+#uno {
     display: flex;
     flex-wrap: wrap;
     width: auto;
-    background-color: green;
-    border: 3px solid purple;
-    margin: 20px;
     padding: 20px;
-    border-radius: 30px 60px 60px 30px;
 }
 
-.sub-container {
-    margin: 10px auto;
-    background-color: rgb(255, 255, 255);
-    border-radius: 60px 30px 30px 60px;
-    border: 3px solid orange;
+#valorA {
+    resize: none;
+    width: 30px;
+    height: 25px;
 }
 
-.code {
-    text-align: center;
-    margin: 20px auto 30px auto;
+
+#valorB {
+    resize: none;
+    width: 30px;
+    height: 25px;
 }
 
-.code p, span {
-    text-justify: distribute;
-    margin: 10px;
-    line-height: 12px;
-}
 
-code {
-    font-weight: 800;
-    color: rgb(0, 0, 0);
-    text-shadow: 0 .5px 1px rgba(168, 26, 166, 0.263), 0 1px .5px rgba(64, 240, 64, 0.356);
-}
-
-.code p, span {
-    font-family: 'Bree Serif', serif;
-    font-weight: 900;
-}
-
-code {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-}
-
-p.indication {
-    display: flex;
+#siguiente {
+    display:none;
     flex-wrap: wrap;
-    text-align: center;
-    margin: 3px auto;
-    padding: 5px;
-    width: 80%;
-    background-color: green;
-    border: 2px solid purple;
-    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: auto;
+    padding: 15px;
+    margin: 20px auto;
+    background-color: rgb(73, 73, 73);
+    border-radius: 15px;
+    box-shadow: 0 0 4px white;
 }
 
-p.indication > span {
-    display: flex;
-    flex-wrap: wrap;
+#siguiente p {
     text-align: center;
-    margin: 3px auto;
-    padding: 5px;
-    background-color: green;
-    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 40px;
+}
+
+#desafioDos {
+    margin: 10px 0 10px 30px;
+    width: 100px;
+    padding: 4px;
+}
+
+
+#intentarNuevamente {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: auto;
+    padding: 15px;
+    margin: 20px auto;
+    background-color: rgb(73, 73, 73);
+    border-radius: 15px;
+    box-shadow: 0 0 4px white;
+}
+
+#intentarNuevamente p {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 40px;
     color: white;
 }
+
+#regresar {
+    margin: 10px auto;
+    padding: 4px;
+}
+
+#dos {
+    display: none;
+    flex-wrap: wrap;
+    width: auto;
+    padding: 20px;
+    }
