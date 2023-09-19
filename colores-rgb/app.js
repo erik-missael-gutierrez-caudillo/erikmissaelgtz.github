@@ -11,36 +11,38 @@ buttonInit.addEventListener('click', () => {
 })
 
 
-// Seleccionar elementos
-
+// Seleccionar elementos de referencia 
+// Inputs tipo range // Variable global
 const inputRed = document.getElementById('red');
 const inputGreen = document.getElementById('green');
 const inputBlue = document.getElementById('blue');
 
-// Texto en párrafos 
+//  Texto en párrafos 
+const textRed = document.getElementById('textRed');
+const textGreen = document.getElementById('textGreen');
+const textBlue = document.getElementById('textBlue');
 
-// Seleccionar los elementos con los valores
-const textRed = document.getElementById('textRed'); // valor de inicio 23
-const textGreen = document.getElementById('textGreen');  // valor de inicio 56
-const textBlue = document.getElementById('textBlue');  // valor de inicio 41
+// Variables para extraer el valor del input range
+let red = inputRed.value; // valor de inicio 23
+let green = inputGreen.value;  // valor de inicio 41
+let blue = inputBlue.value;   // valor de inicio 56
 
-// Variables para extraer el valor del input
-let red = inputRed.value;
-let green = inputGreen.value;
-let blue = inputBlue.value;
-
-// Variables para reemplazar valores obtenidos
+// Variables para reemplazar valores obtenidos em los imputs
 // Actualizar el valor de los párrafos
 textRed.innerText = red;
 textGreen.innerText = green;
 textBlue.innerText = blue;
 
+let addColor = document.getElementById('addColor');
 
 // Función para actualizar el color 
-function actualizarColor (red, green, blue) {
+function actualizarColor(red, green, blue) {
   // Reemplazar el valor de las variables --> ${}
+  // Crear el color RGB
   const colorRGB = `rgb(${red}, ${green}, ${blue})`;
   document.body.style.backgroundColor = colorRGB;
+  addColor.style.backgroundColor = colorRGB;
+  addColor.style.borderColor = colorRGB;
 }
 
 // Eventos
@@ -54,104 +56,35 @@ inputRed.addEventListener('change', (e) => {
 
 // Para actualizar el color verde
 inputGreen.addEventListener('change', (e) => {
-  green = e.target.value;
+  let green = e.target.value;
   textGreen.innerText = green;
   actualizarColor(red, green, blue);
 });
 
 
 // Para actualizar el color azul
-inputBlue.addEventListener('change', (e) => {
-  blue = e.target.value;
+inputBlue.addEventListener('click', (e) => {
+  let blue = e.target.value;
   textBlue.innerText = blue;
   actualizarColor(red, green, blue);
 });
 
-const button = document.getElementById('button');
-let codeColors = document.getElementsByClassName('codeColors');
 
-const cuestionOne = document.getElementById('cuestionOne');
 
-const container = document.getElementById('container');
-
-button.addEventListener('click', () => {
-container.style.display = 'none';
-cuestionOne.style.display = 'flex';
-codeColors.length[0] = codeColors.length[0].textContent('Código de color rgb(' + red + ',' + green + ',' + blue + ')');
-
-console.log(codeColors.length[0]);
-
-codeColors.length[0].textContent;
-})
-
-// Respuesta Si
-const yes = document.getElementById('yes');
-// Función de botón SI
-yes.addEventListener('click', () => {
-  container.style.display = 'flex';
-  cuestionOne.style.display = 'none';
-
-button.addEventListener('click', () => {
-container.style.display = 'none';
-cuestionOne.style.display = 'flex';
-// Código del color añadido
-// Usar esta variable para realizar la lista de colores completa
-codeColors.length[1] = codeColors.length[1].textContent = 'Código de color rgb(' + red + ',' + green + ',' + blue + ')';
-});
+addColor.addEventListener('click', (red, green, blue) => {
+ var code s = red + green + blue;
+  co
+  console.log(codesColors);
 });
 
-
-let codeSelection = document.getElementById('codeSelection');
-
-// Respuesta es NO
-const now = document.getElementById('now');
-
-now.addEventListener('click', () => {
-  listColor.style.display = 'flex';
-  container.style.display = 'none';
-  cuestionOne.style.display = 'none';
-  codeSelection.style.display = 'flex';
-  codeSelection.innerText = 'Código de color rgb(' + red + ',' + green + ',' + blue + ')';
-  return codeSelection;
-});
- 
 // Cerrar la app
 const closeList = document.getElementById('closeList');
 
 closeList.addEventListener('click', () => {
   listColor.style.display = 'none';
   alert('See you later, it was a pleasure helping you with your selection 🖐️');
-  contentInit.style.display = 'block'
-})
-
-// Segunda elección 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  codeSelection.style.display = 'none';
+  contentInit.style.display = 'block';
+  closeList.style.display = 'none';
+});
 

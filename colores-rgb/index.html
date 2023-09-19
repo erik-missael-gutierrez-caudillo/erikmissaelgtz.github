@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="contentInit">
-    <div id="init" class="container-init">
+    <div class="container-init">
       <h1>WELCOME TO THE COLOR PAINT SELECT APP</h1>
       <input type="button" id="buttonInit" value="Nexts">
      </div>
@@ -23,35 +23,34 @@
        
         <div class="color">
             <label for="red">Red (R)</label>
-            <input id="red" type="range" min="0" max="255" step="1" value="">
+            <input id="red" type="range" min="0" max="255" step="1" value="0">
             <p id="textRed"></p>
         </div>
 
         <div class="color">
             <label for="green">Green (G)</label>
-            <input id="green" type="range" min="0" max="255" step="1" value="">
+            <input id="green" type="range" min="0" max="255" step="1" value="0">
             <p id="textGreen"></p>
         </div>
 
         <div class="color">
             <label for="blue">Blue (B)</label>
-            <input id="blue" type="range" min="0" max="255" step="1" value="">
+            <input id="blue" type="range" min="0" max="255" step="1" value="0">
             <p id="textBlue"></p>
         </div>           
         </div>
 
          <!-- Botón de enviar -->
          <div class="button-div">
-          <input type="button" value="Select" id="button">
+          <input type="button" value="Add Color" id="addColor">
+        </div>
+        <div class="button-send">
+          <input id="send" type="button" value="Send">
         </div>
     </div>
      
       <!-- Preguntar si desea añadir otro color al usuario  -->
       <div id="cuestionOne">
-        <div class="title-cuestion">
-          <p>Your color selection:</p>
-        </div>
-      
         <p>Do you want to add any other colors to the list?</p>
         <p id="selectYesOrNot"><span id="yes">Yes</span> <span id="now">Now</span></p>
       </div>
@@ -59,18 +58,13 @@
       <!-- Resultado de elección NO -->
       <div id="listColor">
         <h3>Finalize your color selection </h3>
-        <h3>Your colors selections:</h3>
-        <p id="codeSelection"></p>
         <input type="button" id="closeList" value="ok">
       </div>
 
-      <div class="selection" id="codeSelection">
-        <p class="codeColors"></p>
-        <p class="codeColors"></p>
-        <p class="codeColors"></p>
-        <p class="codeColors"></p>
-        <p class="codeColors"></p>
-        <p class="codeColors"></p>
+      <div id="codeSelection">
+        <h3>Your colors selections:</h3>
+      <p id="codesColors">  
+        </p>
       </div>
   <script src="app.js"></script>
 </body>
