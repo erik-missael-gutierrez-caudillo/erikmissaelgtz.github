@@ -1,11 +1,18 @@
 // Inicio de app
-
+const on = document.getElementById('on')
 // Div contenedor
 const contentInit = document.getElementById('contentInit');
 
-const buttonInit = document.getElementById('buttonInit');
+const  start = document.getElementById(' start');
 
-buttonInit.addEventListener('click', () => {
+ start.addEventListener('click', () => {
+  contentInit.style.display = 'flex';
+  on.style.display = 'none';
+});
+
+const container = document.getElementById('container');
+
+contentInit.addEventListener('click', () => {
   container.style.display = 'flex';
   contentInit.style.display = 'none';
 })
@@ -33,7 +40,6 @@ textRed.innerText = red;
 textGreen.innerText = green;
 textBlue.innerText = blue;
 
-let addColor = document.getElementById('addColor');
 
 // Función para actualizar el color 
 function actualizarColor(red, green, blue) {
@@ -63,19 +69,32 @@ inputGreen.addEventListener('change', (e) => {
 
 
 // Para actualizar el color azul
-inputBlue.addEventListener('click', (e) => {
+inputBlue.addEventListener('change', (e) => {
   let blue = e.target.value;
   textBlue.innerText = blue;
   actualizarColor(red, green, blue);
 });
 
+// Añadir el código de color 
+let addColor = document.getElementById('addColor');
+
+addColor.addEventListener('click', ()=> {
+  document.getElementById('codeColor').innerText = 'Your last color selected : rgb(' +inputRed.value+',' +inputGreen.value+ ',' +inputBlue.value+ ')';
+  console.log('Code color rgb(' +inputRed.value+',' +inputGreen.value+ ',' +inputBlue.value+ ')')
+  document.getElementsByClassName('newColor').textContent = 
+  'Add code color rgb (' +inputRed.value+ ',' +inputGreen.value+ ',' +inputBlue.value+ ') to your Selection';
+})
+const newColor = Array.from(document.querySelectorAll('.newColor'));
+console.dir(newColor);
 
 
-addColor.addEventListener('click', (red, green, blue) => {
- var code s = red + green + blue;
-  co
-  console.log(codesColors);
-});
+const send = document.getElementById('send');
+
+send.addEventListener('click', () => {
+  listColor.style.display = 'flex';
+  contentInit.style.display = 'none';
+  container.style.display = 'none';
+})
 
 // Cerrar la app
 const closeList = document.getElementById('closeList');
@@ -83,8 +102,7 @@ const closeList = document.getElementById('closeList');
 closeList.addEventListener('click', () => {
   listColor.style.display = 'none';
   alert('See you later, it was a pleasure helping you with your selection 🖐️');
-  codeSelection.style.display = 'none';
-  contentInit.style.display = 'block';
+  on.style.display = 'block';
   closeList.style.display = 'none';
 });
 

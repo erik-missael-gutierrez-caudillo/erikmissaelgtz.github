@@ -7,17 +7,23 @@
   <title>Document</title>
 </head>
 <body>
+  <div id="on">  
+    <video id="video" width="900" height="400" autoplay>
+      <source src="../imgs/colores.mp4" type="video/mp4">
+      <source src="../imgs/colores.ogg" type="video/ogg">
+    </video>
+    <input type="button" id="start" value="Start"></div>
+
   <div id="contentInit">
     <div class="container-init">
-      <h1>WELCOME TO THE COLOR PAINT SELECT APP</h1>
-      <input type="button" id="buttonInit" value="Nexts">
+      <p>click anywhere to start</p>
      </div>
   </div>
   
 
   <div id="container">
     <div class="img-logo">
-      <img id="logo" src="../colores-rgb/imgs/img-colores-rgb.svg" alt="Logo Color Paint Select App" width="90">
+      <img id="logo" src="../imgs/img-colores-rgb.svg" alt="Logo Color Paint Select App" width="70">
   </div>
     <div class="container-intern">
        
@@ -37,7 +43,8 @@
             <label for="blue">Blue (B)</label>
             <input id="blue" type="range" min="0" max="255" step="1" value="0">
             <p id="textBlue"></p>
-        </div>           
+        </div>   
+        <small id="codeColor"></small>        
         </div>
 
          <!-- Botón de enviar -->
@@ -45,27 +52,23 @@
           <input type="button" value="Add Color" id="addColor">
         </div>
         <div class="button-send">
-          <input id="send" type="button" value="Send">
+          <input id="send" type="button" value="Finish selection">
         </div>
-    </div>
-     
-      <!-- Preguntar si desea añadir otro color al usuario  -->
-      <div id="cuestionOne">
-        <p>Do you want to add any other colors to the list?</p>
-        <p id="selectYesOrNot"><span id="yes">Yes</span> <span id="now">Now</span></p>
-      </div>
+    </div>    
 
       <!-- Resultado de elección NO -->
       <div id="listColor">
-        <h3>Finalize your color selection </h3>
+        <h3>Finished your color selection </h3>
+
+        <ul id="listEnd">
+          <li class="newColor"></li>
+          <li class="newColor"></li>
+        </ul>
+        
         <input type="button" id="closeList" value="ok">
       </div>
 
-      <div id="codeSelection">
-        <h3>Your colors selections:</h3>
-      <p id="codesColors">  
-        </p>
-      </div>
-  <script src="app.js"></script>
+
+      <script src="app.js"></script>
 </body>
 </html>
